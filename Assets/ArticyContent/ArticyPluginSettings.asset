@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 1760449090, guid: 538242286e35fb84f8e90dd86ba08b80, type: 3}
   m_Name: ArticyPluginSettings
   m_EditorClassIdentifier: 
-  mUsedImportFile: 
+  mUsedImportFile: Assets/ArticyImports/CaptainsChairDemo.articyu3d
   mUsedLocalizationPath: 
-  mLastUsedObjectDefinitionHash: 
-  mLastUsedScriptFragmentsHash: 
-  mLastUsedPackagesHash: 0
-  mLastUsedPackagesCount: 0
-  mLastBuildCode: 0
+  mLastUsedObjectDefinitionHash: 0F49C9CD5BD95F2E2CB12152AB22322AA988FBA41321EF6F73330B7BB69427F9
+  mLastUsedScriptFragmentsHash: 0000000000
+  mLastUsedPackagesHash: 282370559
+  mLastUsedPackagesCount: 1
+  mLastBuildCode: 1
   mAwaitingModelImport: 0
   mAwaitingFragmentsImport: 0
-  mSCMIgnoreState: 0
+  mSCMIgnoreState: 1
   mShowObjectsInDatabaseView: 1
   mNewVersionAvailable: 0
-  mLastPluginVersion: 
+  mLastPluginVersion: 2.0.4.35120
   mUseExperimentalRetinaMode: 0
   mUpdateHierarchyInOptimizedPath: 0
   mAutomaticallyTriggerImport: 1
