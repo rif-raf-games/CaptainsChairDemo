@@ -119,7 +119,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: f386a23c777a35649bb93b772a6163eb, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: dba2c9d6c4f7eaa4993007075ec4fd47, type: 2}
 --- !u!1001 &205888279
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -585,7 +585,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &646539801619769101
 Transform:
   m_ObjectHideFlags: 0
@@ -894,7 +894,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1088433047538739541
 GameObject:
   m_ObjectHideFlags: 0
