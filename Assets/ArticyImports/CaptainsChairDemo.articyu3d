@@ -5,7 +5,7 @@
     "set_IncludedNodes": "Settings, Project, GlobalVariables, ObjectDefinitions, Packages, ScriptMethods, Hierarchy, Assets",
     "set_UseScriptSupport": "True",
     "ExportVersion": "1.1",
-    "ObjectDefinitionsHash": "0F49C9CD5BD95F2E2CB12152AB22322AA988FBA41321EF6F73330B7BB69427F9",
+    "ObjectDefinitionsHash": "484A3F82803664692E8E74BD25FB18DF63909DA53A4BB10CE55FF3683C081968",
     "ScriptFragmentsHash": "0000000000"
   },
   "Project": {
@@ -237,18 +237,26 @@
       ]
     },
     {
-      "Type": "Sex",
+      "Type": "Flow_Fragment_Type",
       "Class": "Enum",
-      "DisplayName": "Sex",
+      "DisplayName": "Flow Fragment Type",
       "Values": {
-        "Male": 0,
-        "Female": 1,
-        "Unknown": 2
+        "Game_Start": 7,
+        "Misc": 1,
+        "Player": 6,
+        "NPC": 3,
+        "Location": 2,
+        "Station": 5,
+        "Mini_Game": 4
       },
       "DisplayNames": {
-        "Male": "Male",
-        "Female": "Female",
-        "Unknown": "Unknown"
+        "Game_Start": "Game Start",
+        "Misc": "Misc",
+        "Player": "Player",
+        "NPC": "NPC",
+        "Location": "Location",
+        "Station": "Station",
+        "Mini_Game": "Mini Game"
       }
     },
     {
@@ -439,6 +447,186 @@
           "ItemType": "OutputPin"
         }
       ]
+    },
+    {
+      "Type": "NPCFragment",
+      "Class": "FlowFragment",
+      "InheritsFrom": "FlowFragment",
+      "Template": {
+        "TechnicalName": "NPCFragment",
+        "DisplayName": "NPC Fragment",
+        "Features": [
+          {
+            "TechnicalName": "Flow_Fragment_Type",
+            "DisplayName": "Flow Fragment Type",
+            "Properties": [
+              {
+                "Property": "Flow_Fragment_Type",
+                "Type": "Flow_Fragment_Type",
+                "DisplayName": "Flow Fragment Type"
+              }
+            ],
+            "Constraints": [
+              {
+                "Property": "Flow_Fragment_Type",
+                "Type": "Enum",
+                "IsLocalized": "False",
+                "SortMode": "BySortIndex"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Type": "LocationFragment",
+      "Class": "FlowFragment",
+      "InheritsFrom": "FlowFragment",
+      "Template": {
+        "TechnicalName": "LocationFragment",
+        "DisplayName": "Location Fragment",
+        "Features": [
+          {
+            "TechnicalName": "Flow_Fragment_Type",
+            "DisplayName": "Flow Fragment Type",
+            "Properties": [
+              {
+                "Property": "Flow_Fragment_Type",
+                "Type": "Flow_Fragment_Type",
+                "DisplayName": "Flow Fragment Type"
+              }
+            ],
+            "Constraints": [
+              {
+                "Property": "Flow_Fragment_Type",
+                "Type": "Enum",
+                "IsLocalized": "False",
+                "SortMode": "BySortIndex"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Type": "MiniGameFragment",
+      "Class": "FlowFragment",
+      "InheritsFrom": "FlowFragment",
+      "Template": {
+        "TechnicalName": "MiniGameFragment",
+        "DisplayName": "Mini Game Fragment",
+        "Features": [
+          {
+            "TechnicalName": "Flow_Fragment_Type",
+            "DisplayName": "Flow Fragment Type",
+            "Properties": [
+              {
+                "Property": "Flow_Fragment_Type",
+                "Type": "Flow_Fragment_Type",
+                "DisplayName": "Flow Fragment Type"
+              }
+            ],
+            "Constraints": [
+              {
+                "Property": "Flow_Fragment_Type",
+                "Type": "Enum",
+                "IsLocalized": "False",
+                "SortMode": "BySortIndex"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Type": "PlayerFragment",
+      "Class": "FlowFragment",
+      "InheritsFrom": "FlowFragment",
+      "Template": {
+        "TechnicalName": "PlayerFragment",
+        "DisplayName": "Player Fragment",
+        "Features": [
+          {
+            "TechnicalName": "Flow_Fragment_Type",
+            "DisplayName": "Flow Fragment Type",
+            "Properties": [
+              {
+                "Property": "Flow_Fragment_Type",
+                "Type": "Flow_Fragment_Type",
+                "DisplayName": "Flow Fragment Type"
+              }
+            ],
+            "Constraints": [
+              {
+                "Property": "Flow_Fragment_Type",
+                "Type": "Enum",
+                "IsLocalized": "False",
+                "SortMode": "BySortIndex"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Type": "StationFragment",
+      "Class": "FlowFragment",
+      "InheritsFrom": "FlowFragment",
+      "Template": {
+        "TechnicalName": "StationFragment",
+        "DisplayName": "Station Fragment",
+        "Features": [
+          {
+            "TechnicalName": "Flow_Fragment_Type",
+            "DisplayName": "Flow Fragment Type",
+            "Properties": [
+              {
+                "Property": "Flow_Fragment_Type",
+                "Type": "Flow_Fragment_Type",
+                "DisplayName": "Flow Fragment Type"
+              }
+            ],
+            "Constraints": [
+              {
+                "Property": "Flow_Fragment_Type",
+                "Type": "Enum",
+                "IsLocalized": "False",
+                "SortMode": "BySortIndex"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Type": "Misc_Fragment",
+      "Class": "FlowFragment",
+      "InheritsFrom": "FlowFragment",
+      "Template": {
+        "TechnicalName": "Misc_Fragment",
+        "DisplayName": "Misc Fragment",
+        "Features": [
+          {
+            "TechnicalName": "Flow_Fragment_Type",
+            "DisplayName": "Flow Fragment Type",
+            "Properties": [
+              {
+                "Property": "Flow_Fragment_Type",
+                "Type": "Flow_Fragment_Type",
+                "DisplayName": "Flow Fragment Type"
+              }
+            ],
+            "Constraints": [
+              {
+                "Property": "Flow_Fragment_Type",
+                "Type": "Enum",
+                "IsLocalized": "False",
+                "SortMode": "BySortIndex"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "Type": "Dialogue",
@@ -821,122 +1009,31 @@
       ]
     },
     {
-      "Type": "DefaultSupportingCharacterTemplate",
+      "Type": "NPC",
       "Class": "Entity",
       "InheritsFrom": "Entity",
       "Template": {
-        "TechnicalName": "DefaultSupportingCharacterTemplate",
-        "DisplayName": "Supporting characters",
+        "TechnicalName": "NPC",
+        "DisplayName": "NPC",
         "Features": [
           {
-            "TechnicalName": "DefaultBasicCharacterFeature",
-            "DisplayName": "Basic Character Properties",
+            "TechnicalName": "Basic_Character_Attributes",
+            "DisplayName": "Basic Character Attributes",
             "Properties": [
               {
-                "Property": "Age",
-                "Type": "Float",
-                "DisplayName": "Age"
-              },
-              {
-                "Property": "Species",
+                "Property": "Name",
                 "Type": "string",
-                "DisplayName": "Species"
-              },
-              {
-                "Property": "BornIn",
-                "Type": "string",
-                "DisplayName": "Born in"
-              },
-              {
-                "Property": "Sex",
-                "Type": "Sex",
-                "DisplayName": "Sex"
-              },
-              {
-                "Property": "Occupation",
-                "Type": "string",
-                "DisplayName": "Profession"
-              },
-              {
-                "Property": "Accent",
-                "Type": "string",
-                "DisplayName": "Voice"
-              },
-              {
-                "Property": "Personality",
-                "Type": "string",
-                "DisplayName": "Personality"
-              },
-              {
-                "Property": "Appearance",
-                "Type": "string",
-                "DisplayName": "Appearance"
+                "DisplayName": "Name"
               }
             ],
             "Constraints": [
               {
-                "Property": "Age",
-                "Type": "Number",
-                "MinValue": "-3.40282346638529E+38",
-                "MaxValue": "3.40282346638529E+38",
-                "Precision": "0",
-                "MinPrecision": "0",
-                "MaxPrecision": "0",
-                "Unit": null
-              },
-              {
-                "Property": "Species",
+                "Property": "Name",
                 "Type": "Text",
                 "MaxLength": "2048",
                 "PlaceholderValue": "",
-                "IsLocalized": "True",
+                "IsLocalized": "False",
                 "AllowsLinebreaks": "False"
-              },
-              {
-                "Property": "BornIn",
-                "Type": "Text",
-                "MaxLength": "2048",
-                "PlaceholderValue": "",
-                "IsLocalized": "True",
-                "AllowsLinebreaks": "False"
-              },
-              {
-                "Property": "Sex",
-                "Type": "Enum",
-                "IsLocalized": "True",
-                "SortMode": "BySortIndex"
-              },
-              {
-                "Property": "Occupation",
-                "Type": "Text",
-                "MaxLength": "2048",
-                "PlaceholderValue": "",
-                "IsLocalized": "True",
-                "AllowsLinebreaks": "False"
-              },
-              {
-                "Property": "Accent",
-                "Type": "Text",
-                "MaxLength": "2048",
-                "PlaceholderValue": "",
-                "IsLocalized": "True",
-                "AllowsLinebreaks": "False"
-              },
-              {
-                "Property": "Personality",
-                "Type": "Text",
-                "MaxLength": "2048",
-                "PlaceholderValue": "",
-                "IsLocalized": "True",
-                "AllowsLinebreaks": "True"
-              },
-              {
-                "Property": "Appearance",
-                "Type": "Text",
-                "MaxLength": "2048",
-                "PlaceholderValue": "",
-                "IsLocalized": "True",
-                "AllowsLinebreaks": "True"
               }
             ]
           }
@@ -944,208 +1041,78 @@
       }
     },
     {
-      "Type": "DefaultMainCharacterTemplate",
+      "Type": "PlayerCharacter",
       "Class": "Entity",
       "InheritsFrom": "Entity",
       "Template": {
-        "TechnicalName": "DefaultMainCharacterTemplate",
-        "DisplayName": "Main characters",
+        "TechnicalName": "PlayerCharacter",
+        "DisplayName": "Player Character",
         "Features": [
           {
-            "TechnicalName": "DefaultExtendedCharacterFeature",
-            "DisplayName": "Extended Character Properties",
+            "TechnicalName": "Basic_Character_Attributes",
+            "DisplayName": "Basic Character Attributes",
             "Properties": [
               {
-                "Property": "Motivation",
+                "Property": "Name",
                 "Type": "string",
-                "DisplayName": "Goals"
-              },
-              {
-                "Property": "InnerConflict",
-                "Type": "string",
-                "DisplayName": "Inner Conflict"
-              },
-              {
-                "Property": "Skills",
-                "Type": "string",
-                "DisplayName": "Skills"
-              },
-              {
-                "Property": "Fears",
-                "Type": "string",
-                "DisplayName": "Weaknesses"
-              },
-              {
-                "Property": "Habits",
-                "Type": "string",
-                "DisplayName": "Quirks / Habits"
-              },
-              {
-                "Property": "FurtherDetails",
-                "Type": "string",
-                "DisplayName": "Further Details"
+                "DisplayName": "Name"
               }
             ],
             "Constraints": [
               {
-                "Property": "Motivation",
+                "Property": "Name",
                 "Type": "Text",
                 "MaxLength": "2048",
                 "PlaceholderValue": "",
-                "IsLocalized": "True",
-                "AllowsLinebreaks": "True"
-              },
-              {
-                "Property": "InnerConflict",
-                "Type": "Text",
-                "MaxLength": "2048",
-                "PlaceholderValue": "",
-                "IsLocalized": "True",
-                "AllowsLinebreaks": "True"
-              },
-              {
-                "Property": "Skills",
-                "Type": "Text",
-                "MaxLength": "2048",
-                "PlaceholderValue": "",
-                "IsLocalized": "True",
-                "AllowsLinebreaks": "True"
-              },
-              {
-                "Property": "Fears",
-                "Type": "Text",
-                "MaxLength": "2048",
-                "PlaceholderValue": "",
-                "IsLocalized": "True",
-                "AllowsLinebreaks": "True"
-              },
-              {
-                "Property": "Habits",
-                "Type": "Text",
-                "MaxLength": "2048",
-                "PlaceholderValue": "",
-                "IsLocalized": "True",
-                "AllowsLinebreaks": "True"
-              },
-              {
-                "Property": "FurtherDetails",
-                "Type": "Text",
-                "MaxLength": "2048",
-                "PlaceholderValue": "",
-                "IsLocalized": "True",
-                "AllowsLinebreaks": "True"
+                "IsLocalized": "False",
+                "AllowsLinebreaks": "False"
               }
             ]
-          },
+          }
+        ]
+      }
+    },
+    {
+      "Type": "Station",
+      "Class": "Entity",
+      "InheritsFrom": "Entity",
+      "Template": {
+        "TechnicalName": "Station",
+        "DisplayName": "Station",
+        "Features": []
+      }
+    },
+    {
+      "Type": "Slot_Container",
+      "Class": "Entity",
+      "InheritsFrom": "Entity",
+      "Template": {
+        "TechnicalName": "Slot_Container",
+        "DisplayName": "Slot Container",
+        "Features": [
           {
-            "TechnicalName": "DefaultBasicCharacterFeature",
-            "DisplayName": "Basic Character Properties",
+            "TechnicalName": "Slot_Feature",
+            "DisplayName": "Slot Feature",
             "Properties": [
               {
-                "Property": "Age",
-                "Type": "Float",
-                "DisplayName": "Age"
-              },
-              {
-                "Property": "Species",
-                "Type": "string",
-                "DisplayName": "Species"
-              },
-              {
-                "Property": "BornIn",
-                "Type": "string",
-                "DisplayName": "Born in"
-              },
-              {
-                "Property": "Sex",
-                "Type": "Sex",
-                "DisplayName": "Sex"
-              },
-              {
-                "Property": "Occupation",
-                "Type": "string",
-                "DisplayName": "Profession"
-              },
-              {
-                "Property": "Accent",
-                "Type": "string",
-                "DisplayName": "Voice"
-              },
-              {
-                "Property": "Personality",
-                "Type": "string",
-                "DisplayName": "Personality"
-              },
-              {
-                "Property": "Appearance",
-                "Type": "string",
-                "DisplayName": "Appearance"
+                "Property": "Slot_Feature_Slot",
+                "Type": "Id",
+                "DisplayName": "Slot Feature's Slot"
               }
             ],
             "Constraints": [
               {
-                "Property": "Age",
-                "Type": "Number",
-                "MinValue": "-3.40282346638529E+38",
-                "MaxValue": "3.40282346638529E+38",
-                "Precision": "0",
-                "MinPrecision": "0",
-                "MaxPrecision": "0",
-                "Unit": null
-              },
-              {
-                "Property": "Species",
-                "Type": "Text",
-                "MaxLength": "2048",
+                "Property": "Slot_Feature_Slot",
+                "Type": "ReferenceSlot",
+                "AllowedModelTypes": [
+                  "FlowFragment",
+                  "DialogueFragment"
+                ],
                 "PlaceholderValue": "",
-                "IsLocalized": "True",
-                "AllowsLinebreaks": "False"
-              },
-              {
-                "Property": "BornIn",
-                "Type": "Text",
-                "MaxLength": "2048",
-                "PlaceholderValue": "",
-                "IsLocalized": "True",
-                "AllowsLinebreaks": "False"
-              },
-              {
-                "Property": "Sex",
-                "Type": "Enum",
-                "IsLocalized": "True",
-                "SortMode": "BySortIndex"
-              },
-              {
-                "Property": "Occupation",
-                "Type": "Text",
-                "MaxLength": "2048",
-                "PlaceholderValue": "",
-                "IsLocalized": "True",
-                "AllowsLinebreaks": "False"
-              },
-              {
-                "Property": "Accent",
-                "Type": "Text",
-                "MaxLength": "2048",
-                "PlaceholderValue": "",
-                "IsLocalized": "True",
-                "AllowsLinebreaks": "False"
-              },
-              {
-                "Property": "Personality",
-                "Type": "Text",
-                "MaxLength": "2048",
-                "PlaceholderValue": "",
-                "IsLocalized": "True",
-                "AllowsLinebreaks": "True"
-              },
-              {
-                "Property": "Appearance",
-                "Type": "Text",
-                "MaxLength": "2048",
-                "PlaceholderValue": "",
-                "IsLocalized": "True",
-                "AllowsLinebreaks": "True"
+                "AllowedAssetCategories": [
+                  "None"
+                ],
+                "AllowedModelTemplates": []
               }
             ]
           }
@@ -2159,13 +2126,13 @@
       "IsDefaultPackage": true,
       "Models": [
         {
-          "Type": "FlowFragment",
+          "Type": "Misc_Fragment",
           "Properties": {
-            "TechnicalName": "FFr_4C32E455",
-            "Id": "0x1000002000016EF",
+            "TechnicalName": "FFr_A8B5C4D4",
+            "Id": "0x100000200001872",
             "Parent": "0x300000043CE43F7",
             "Attachments": [],
-            "DisplayName": "Demo Start",
+            "DisplayName": "Captains Chair Demo",
             "PreviewImage": {
               "ViewBox": {
                 "x": 0.0,
@@ -2177,14 +2144,94 @@
               "Asset": "0x0"
             },
             "Color": {
-              "r": 0.5764706,
-              "g": 0.75686276,
-              "b": 0.8
+              "r": 0.0156862754,
+              "g": 0.3137255,
+              "b": 0.4117647
             },
-            "Text": "This is the start of the Captain's Chair demo.",
+            "Text": "This is the main game story.",
             "ExternalId": "",
             "Position": {
-              "x": 500.0,
+              "x": 125.0,
+              "y": 150.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 275.0,
+              "h": 200.0
+            },
+            "ShortId": 2830484692,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000200001875",
+                "Owner": "0x100000200001872",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000020000187C",
+                    "Target": "0x100000200001879"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000200001AA5",
+                    "Target": "0x100000200001AA2"
+                  }
+                ]
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000200001876",
+                "Owner": "0x100000200001872"
+              }
+            ]
+          },
+          "Template": {
+            "Flow_Fragment_Type": {
+              "Flow_Fragment_Type": 7
+            }
+          }
+        },
+        {
+          "Type": "LocationFragment",
+          "Properties": {
+            "TechnicalName": "Ship_Fragment",
+            "Id": "0x100000200001879",
+            "Parent": "0x100000200001872",
+            "Attachments": [],
+            "DisplayName": "Ship",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x1000002000018B2"
+            },
+            "Color": {
+              "r": 0.7647059,
+              "g": 0.149019614,
+              "b": 0.0
+            },
+            "Text": "Main ship.",
+            "ExternalId": "",
+            "Position": {
+              "x": 225.0,
               "y": 425.0
             },
             "ZIndex": 0.0,
@@ -2192,21 +2239,1318 @@
               "w": 275.0,
               "h": 200.0
             },
-            "ShortId": 1278403669,
+            "ShortId": 2401013483,
             "InputPins": [
               {
                 "Text": "",
-                "Id": "0x1000002000016F2",
-                "Owner": "0x1000002000016EF"
+                "Id": "0x10000020000187C",
+                "Owner": "0x100000200001879",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000002000018BC",
+                    "Target": "0x1000002000018BA"
+                  }
+                ]
               }
             ],
             "OutputPins": [
               {
                 "Text": "",
-                "Id": "0x1000002000016F3",
-                "Owner": "0x1000002000016EF"
+                "Id": "0x10000020000187D",
+                "Owner": "0x100000200001879",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000002000018AB",
+                    "Target": "0x1000002000018A8"
+                  }
+                ]
               }
             ]
+          },
+          "Template": {
+            "Flow_Fragment_Type": {
+              "Flow_Fragment_Type": 2
+            }
+          }
+        },
+        {
+          "Type": "LocationFragment",
+          "Properties": {
+            "TechnicalName": "Other_Location_Fragment",
+            "Id": "0x100000200001AA2",
+            "Parent": "0x100000200001872",
+            "Attachments": [],
+            "DisplayName": "Other Location",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.7647059,
+              "g": 0.149019614,
+              "b": 0.0
+            },
+            "Text": "This is another location that I'm just using for testing.",
+            "ExternalId": "",
+            "Position": {
+              "x": 225.0,
+              "y": 175.0
+            },
+            "ZIndex": 6.0,
+            "Size": {
+              "w": 275.0,
+              "h": 200.0
+            },
+            "ShortId": 2426593911,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000200001AA5",
+                "Owner": "0x100000200001AA2"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000200001AA6",
+                "Owner": "0x100000200001AA2",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000200001876",
+                    "Target": "0x100000200001872"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "Flow_Fragment_Type": {
+              "Flow_Fragment_Type": 2
+            }
+          }
+        },
+        {
+          "Type": "NPCFragment",
+          "Properties": {
+            "TechnicalName": "FFr_64A98722",
+            "Id": "0x100000200001891",
+            "Parent": "0x100000200001879",
+            "Attachments": [
+              "0x10000020000177C"
+            ],
+            "DisplayName": "Captain Jones",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.160784319,
+              "g": 0.02745098,
+              "b": 0.349019617
+            },
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": 250.0,
+              "y": 375.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 275.0,
+              "h": 200.0
+            },
+            "ShortId": 1688831778,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000200001894",
+                "Owner": "0x100000200001891"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000200001895",
+                "Owner": "0x100000200001891",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000200001908",
+                    "Target": "0x100000200001905"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "Flow_Fragment_Type": {
+              "Flow_Fragment_Type": 3
+            }
+          }
+        },
+        {
+          "Type": "NPCFragment",
+          "Properties": {
+            "TechnicalName": "FFr_AE3FB9B7",
+            "Id": "0x1000002000018D2",
+            "Parent": "0x100000200001879",
+            "Attachments": [
+              "0x1000002000018DC"
+            ],
+            "DisplayName": "Gene",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.160784319,
+              "g": 0.02745098,
+              "b": 0.349019617
+            },
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": 250.0,
+              "y": 150.0
+            },
+            "ZIndex": 5.0,
+            "Size": {
+              "w": 275.0,
+              "h": 200.0
+            },
+            "ShortId": 2923411895,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000002000018D5",
+                "Owner": "0x1000002000018D2"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000002000018D6",
+                "Owner": "0x1000002000018D2",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000200001908",
+                    "Target": "0x100000200001905"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "Flow_Fragment_Type": {
+              "Flow_Fragment_Type": 3
+            }
+          }
+        },
+        {
+          "Type": "NPCFragment",
+          "Properties": {
+            "TechnicalName": "FFr_BB0AB29C",
+            "Id": "0x1000002000018F5",
+            "Parent": "0x100000200001879",
+            "Attachments": [
+              "0x1000002000018E3"
+            ],
+            "DisplayName": "Joe",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.160784319,
+              "g": 0.02745098,
+              "b": 0.349019617
+            },
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": 225.0,
+              "y": -100.0
+            },
+            "ZIndex": 6.0,
+            "Size": {
+              "w": 275.0,
+              "h": 200.0
+            },
+            "ShortId": 3138040476,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000002000018F8",
+                "Owner": "0x1000002000018F5"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000002000018F9",
+                "Owner": "0x1000002000018F5",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000200001908",
+                    "Target": "0x100000200001905"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "Flow_Fragment_Type": {
+              "Flow_Fragment_Type": 3
+            }
+          }
+        },
+        {
+          "Type": "NPCFragment",
+          "Properties": {
+            "TechnicalName": "FFr_A8987170",
+            "Id": "0x1000002000018FD",
+            "Parent": "0x100000200001879",
+            "Attachments": [
+              "0x1000002000018E7"
+            ],
+            "DisplayName": "Jane",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.160784319,
+              "g": 0.02745098,
+              "b": 0.349019617
+            },
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": 225.0,
+              "y": -325.0
+            },
+            "ZIndex": 8.0,
+            "Size": {
+              "w": 275.0,
+              "h": 200.0
+            },
+            "ShortId": 2828562800,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000200001900",
+                "Owner": "0x1000002000018FD"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000200001901",
+                "Owner": "0x1000002000018FD",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000200001908",
+                    "Target": "0x100000200001905"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "Flow_Fragment_Type": {
+              "Flow_Fragment_Type": 3
+            }
+          }
+        },
+        {
+          "Type": "StationFragment",
+          "Properties": {
+            "TechnicalName": "FFr_F083DF8D",
+            "Id": "0x100000200001951",
+            "Parent": "0x100000200001879",
+            "Attachments": [],
+            "DisplayName": "Mini Game Computer",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.0627451,
+              "g": 0.05490196,
+              "b": 0.0196078438
+            },
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": 225.0,
+              "y": -550.0
+            },
+            "ZIndex": 15.0,
+            "Size": {
+              "w": 275.0,
+              "h": 200.0
+            },
+            "ShortId": 4035174285,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000200001954",
+                "Owner": "0x100000200001951"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000200001955",
+                "Owner": "0x100000200001951",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000200001908",
+                    "Target": "0x100000200001905"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000020000187D",
+                    "Target": "0x100000200001879"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "Flow_Fragment_Type": {
+              "Flow_Fragment_Type": 5
+            }
+          }
+        },
+        {
+          "Type": "MiniGameFragment",
+          "Properties": {
+            "TechnicalName": "FFr_1BE1D6AB",
+            "Id": "0x1000002000018A8",
+            "Parent": "0x100000200001872",
+            "Attachments": [],
+            "DisplayName": "Cargo",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x1000002000018B7"
+            },
+            "Color": {
+              "r": 0.298039228,
+              "g": 0.03529412,
+              "b": 0.03137255
+            },
+            "Text": "Cargo mini game.",
+            "ExternalId": "",
+            "Position": {
+              "x": 625.0,
+              "y": 375.0
+            },
+            "ZIndex": 2.0,
+            "Size": {
+              "w": 275.0,
+              "h": 200.0
+            },
+            "ShortId": 467785387,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000002000018AB",
+                "Owner": "0x1000002000018A8"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000002000018AC",
+                "Owner": "0x1000002000018A8",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000200001876",
+                    "Target": "0x100000200001872"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "Flow_Fragment_Type": {
+              "Flow_Fragment_Type": 4
+            }
+          }
+        },
+        {
+          "Type": "Hub",
+          "Properties": {
+            "TechnicalName": "Hub_FC3F756F",
+            "Id": "0x1000002000018BA",
+            "Parent": "0x100000200001879",
+            "DisplayName": "Ship Wandering",
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": -125.0,
+              "y": 150.0
+            },
+            "ZIndex": 2.0,
+            "Size": {
+              "w": 175.0,
+              "h": 50.0
+            },
+            "ShortId": 4232017263,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000002000018BC",
+                "Owner": "0x1000002000018BA"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000002000018BD",
+                "Owner": "0x1000002000018BA",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000200001894",
+                    "Target": "0x100000200001891"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000002000018D5",
+                    "Target": "0x1000002000018D2"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000002000018F8",
+                    "Target": "0x1000002000018F5"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000200001900",
+                    "Target": "0x1000002000018FD"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000200001954",
+                    "Target": "0x100000200001951"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Jump",
+          "Properties": {
+            "TechnicalName": "Jmp_7DBD390E",
+            "Id": "0x100000200001905",
+            "Parent": "0x100000200001879",
+            "Target": "0x1000002000018BA",
+            "TargetPin": "0x1000002000018BC",
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": 650.0,
+              "y": 50.0
+            },
+            "ZIndex": 10.0,
+            "Size": {
+              "w": 175.0,
+              "h": 150.0
+            },
+            "ShortId": 2109552910,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000200001908",
+                "Owner": "0x100000200001905"
+              }
+            ]
+          }
+        },
+        {
+          "Type": "PlayerCharacter",
+          "Properties": {
+            "TechnicalName": "Player_Character",
+            "Id": "0x10000020000186A",
+            "Parent": "0x10000020000177A",
+            "Attachments": [],
+            "DisplayName": "Player",
+            "Color": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0
+            },
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": 20.0,
+              "y": 20.0
+            },
+            "ZIndex": 1.0,
+            "Size": {
+              "w": 256.0,
+              "h": 196.0
+            },
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x10000020000186F"
+            },
+            "ShortId": 4201223611
+          },
+          "Template": {
+            "Basic_Character_Attributes": {
+              "Name": "Mark Craton"
+            }
+          }
+        },
+        {
+          "Type": "NPC",
+          "Properties": {
+            "TechnicalName": "Ntt_0A812046",
+            "Id": "0x1000002000018DC",
+            "Parent": "0x1000002000018EC",
+            "Attachments": [],
+            "DisplayName": "Gene",
+            "Color": {
+              "r": 0.160784319,
+              "g": 0.02745098,
+              "b": 0.349019617
+            },
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": 40.0,
+              "y": 40.0
+            },
+            "ZIndex": 2.0,
+            "Size": {
+              "w": 256.0,
+              "h": 196.0
+            },
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x1000002000018C9"
+            },
+            "ShortId": 176234566
+          },
+          "Template": {
+            "Basic_Character_Attributes": {
+              "Name": "Gene"
+            }
+          }
+        },
+        {
+          "Type": "NPC",
+          "Properties": {
+            "TechnicalName": "Ntt_256413A5",
+            "Id": "0x1000002000018E7",
+            "Parent": "0x1000002000018EC",
+            "Attachments": [],
+            "DisplayName": "Jane",
+            "Color": {
+              "r": 0.160784319,
+              "g": 0.02745098,
+              "b": 0.349019617
+            },
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": 80.0,
+              "y": 80.0
+            },
+            "ZIndex": 4.0,
+            "Size": {
+              "w": 256.0,
+              "h": 196.0
+            },
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x1000002000018CC"
+            },
+            "ShortId": 627315621
+          },
+          "Template": {
+            "Basic_Character_Attributes": {
+              "Name": "Jane"
+            }
+          }
+        },
+        {
+          "Type": "NPC",
+          "Properties": {
+            "TechnicalName": "Ntt_FAC487F1",
+            "Id": "0x1000002000018E3",
+            "Parent": "0x1000002000018EC",
+            "Attachments": [],
+            "DisplayName": "Joe",
+            "Color": {
+              "r": 0.160784319,
+              "g": 0.02745098,
+              "b": 0.349019617
+            },
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": 60.0,
+              "y": 60.0
+            },
+            "ZIndex": 3.0,
+            "Size": {
+              "w": 256.0,
+              "h": 196.0
+            },
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x1000002000018CF"
+            },
+            "ShortId": 4207183857
+          },
+          "Template": {
+            "Basic_Character_Attributes": {
+              "Name": "Joe"
+            }
+          }
+        },
+        {
+          "Type": "NPC",
+          "Properties": {
+            "TechnicalName": "Captain_Jones",
+            "Id": "0x10000020000177C",
+            "Parent": "0x1000002000018EC",
+            "Attachments": [],
+            "DisplayName": "Captain Jones",
+            "Color": {
+              "r": 0.160784319,
+              "g": 0.02745098,
+              "b": 0.349019617
+            },
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 256.0,
+              "h": 196.0
+            },
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x1000002000017E9"
+            },
+            "ShortId": 1433020214
+          },
+          "Template": {
+            "Basic_Character_Attributes": {
+              "Name": "Captain Jones"
+            }
+          }
+        },
+        {
+          "Type": "Station",
+          "Properties": {
+            "TechnicalName": "Ntt_5D619F4D",
+            "Id": "0x100000200001957",
+            "Parent": "0x10000020000191E",
+            "Attachments": [],
+            "DisplayName": "Cargo Computer",
+            "Color": {
+              "r": 0.0627451,
+              "g": 0.05490196,
+              "b": 0.0196078438
+            },
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 256.0,
+              "h": 196.0
+            },
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "ShortId": 1566678861
+          },
+          "Template": {}
+        },
+        {
+          "Type": "Slot_Container",
+          "Properties": {
+            "TechnicalName": "Start_On_Object",
+            "Id": "0x100000200001B7F",
+            "Parent": "0x100000200001B13",
+            "Attachments": [],
+            "DisplayName": "Start On Object",
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 256.0,
+              "h": 196.0
+            },
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "ShortId": 3822827378
+          },
+          "Template": {
+            "Slot_Feature": {
+              "Slot_Feature_Slot": "0x0"
+            }
+          }
+        },
+        {
+          "Type": "Asset",
+          "AssetRef": "Assets/Images/Characters/CaptainJones.jpg",
+          "Category": "Image",
+          "Properties": {
+            "TechnicalName": "Ast_23D0A700",
+            "Id": "0x1000002000017E9",
+            "Parent": "0x1000002000017E7",
+            "DisplayName": "CaptainJones",
+            "Filename": "CaptainJones(16EB).jpg",
+            "OriginalSource": "file:///C:/Users/creep/OneDrive/Desktop/CaptainJones.jpg",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              }
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 256.0,
+              "h": 196.0
+            },
+            "ShortId": 600876800
+          }
+        },
+        {
+          "Type": "Asset",
+          "AssetRef": "Assets/Images/Characters/Player.png",
+          "Category": "Image",
+          "Properties": {
+            "TechnicalName": "Ast_2C453409",
+            "Id": "0x10000020000186F",
+            "Parent": "0x1000002000017E7",
+            "DisplayName": "Player",
+            "Filename": "Player(196D).png",
+            "OriginalSource": "file:///C:/Users/creep/OneDrive/Desktop/Player.png",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              }
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": 20.0,
+              "y": 20.0
+            },
+            "ZIndex": 1.0,
+            "Size": {
+              "w": 256.0,
+              "h": 196.0
+            },
+            "ShortId": 742732809
+          }
+        },
+        {
+          "Type": "Asset",
+          "AssetRef": "Assets/Images/Characters/Gene.png",
+          "Category": "Image",
+          "Properties": {
+            "TechnicalName": "Ast_F2C66FEF",
+            "Id": "0x1000002000018C9",
+            "Parent": "0x1000002000017E7",
+            "DisplayName": "Gene",
+            "Filename": "Gene(19CB).png",
+            "OriginalSource": "file:///C:/Users/creep/OneDrive/Desktop/Gene.png",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              }
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": 40.0,
+              "y": 40.0
+            },
+            "ZIndex": 2.0,
+            "Size": {
+              "w": 256.0,
+              "h": 196.0
+            },
+            "ShortId": 4073091055
+          }
+        },
+        {
+          "Type": "Asset",
+          "AssetRef": "Assets/Images/Characters/Jane.png",
+          "Category": "Image",
+          "Properties": {
+            "TechnicalName": "Ast_257CB704",
+            "Id": "0x1000002000018CC",
+            "Parent": "0x1000002000017E7",
+            "DisplayName": "Jane",
+            "Filename": "Jane(19CE).png",
+            "OriginalSource": "file:///C:/Users/creep/OneDrive/Desktop/Jane.png",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              }
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": 60.0,
+              "y": 60.0
+            },
+            "ZIndex": 3.0,
+            "Size": {
+              "w": 256.0,
+              "h": 196.0
+            },
+            "ShortId": 628930308
+          }
+        },
+        {
+          "Type": "Asset",
+          "AssetRef": "Assets/Images/Characters/Joe.png",
+          "Category": "Image",
+          "Properties": {
+            "TechnicalName": "Ast_A562B484",
+            "Id": "0x1000002000018CF",
+            "Parent": "0x1000002000017E7",
+            "DisplayName": "Joe",
+            "Filename": "Joe(19CD).png",
+            "OriginalSource": "file:///C:/Users/creep/OneDrive/Desktop/Joe.png",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              }
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": 80.0,
+              "y": 80.0
+            },
+            "ZIndex": 4.0,
+            "Size": {
+              "w": 256.0,
+              "h": 196.0
+            },
+            "ShortId": 2774709380
+          }
+        },
+        {
+          "Type": "Asset",
+          "AssetRef": "Assets/Images/Locations/RedDwarf.jpg",
+          "Category": "Image",
+          "Properties": {
+            "TechnicalName": "Ast_9E45D5C8",
+            "Id": "0x1000002000018B2",
+            "Parent": "0x1000002000018B0",
+            "DisplayName": "RedDwarf",
+            "Filename": "RedDwarf(19B0).jpg",
+            "OriginalSource": "file:///C:/Users/creep/OneDrive/Desktop/RedDwarf.jpg",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              }
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 256.0,
+              "h": 196.0
+            },
+            "ShortId": 2655376840
+          }
+        },
+        {
+          "Type": "Asset",
+          "AssetRef": "Assets/Images/Mini_Games/Cargo.jpg",
+          "Category": "Image",
+          "Properties": {
+            "TechnicalName": "Ast_4A408DDE",
+            "Id": "0x1000002000018B7",
+            "Parent": "0x1000002000018B5",
+            "DisplayName": "Cargo",
+            "Filename": "Cargo(19B5).jpg",
+            "OriginalSource": "file:///C:/Users/creep/OneDrive/Desktop/Cargo.jpg",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              }
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 256.0,
+              "h": 196.0
+            },
+            "ShortId": 1245744606
+          }
+        },
+        {
+          "Type": "UserFolder",
+          "Properties": {
+            "TechnicalName": "Ufo_90BCC9FB",
+            "Id": "0x100000200001720",
+            "Parent": "0x300000078B45A71",
+            "DisplayName": "Characters",
+            "ExternalId": "",
+            "ShortId": 2428291579
+          }
+        },
+        {
+          "Type": "UserFolder",
+          "Properties": {
+            "TechnicalName": "Ufo_5C58DE25",
+            "Id": "0x100000200001911",
+            "Parent": "0x300000078B45A71",
+            "DisplayName": "Stations",
+            "ExternalId": "",
+            "ShortId": 1549327909
+          }
+        },
+        {
+          "Type": "UserFolder",
+          "Properties": {
+            "TechnicalName": "Ufo_021423FD",
+            "Id": "0x100000200001B69",
+            "Parent": "0x300000078B45A71",
+            "DisplayName": "Misc",
+            "ExternalId": "",
+            "ShortId": 34874365
+          }
+        },
+        {
+          "Type": "UserFolder",
+          "Properties": {
+            "TechnicalName": "Ufo_0F39E584",
+            "Id": "0x10000020000177A",
+            "Parent": "0x3000000AC61A2B3",
+            "DisplayName": "Characters",
+            "ExternalId": "",
+            "ShortId": 255452548
+          }
+        },
+        {
+          "Type": "UserFolder",
+          "Properties": {
+            "TechnicalName": "Ufo_50CE9075",
+            "Id": "0x1000002000018EC",
+            "Parent": "0x10000020000177A",
+            "DisplayName": "NPC",
+            "ExternalId": "",
+            "ShortId": 1355714677
+          }
+        },
+        {
+          "Type": "UserFolder",
+          "Properties": {
+            "TechnicalName": "Ufo_A1481446",
+            "Id": "0x10000020000191E",
+            "Parent": "0x3000000AC61A2B3",
+            "DisplayName": "Stations",
+            "ExternalId": "",
+            "ShortId": 2705855558
+          }
+        },
+        {
+          "Type": "UserFolder",
+          "Properties": {
+            "TechnicalName": "Ufo_0EE962F1",
+            "Id": "0x100000200001B13",
+            "Parent": "0x3000000AC61A2B3",
+            "DisplayName": "Misc",
+            "ExternalId": "",
+            "ShortId": 250176241
           }
         },
         {
@@ -2218,6 +3562,39 @@
             "DisplayName": "Images",
             "ExternalId": "",
             "ShortId": 4197216520
+          }
+        },
+        {
+          "Type": "UserFolder",
+          "Properties": {
+            "TechnicalName": "Ufo_531DDA6A",
+            "Id": "0x1000002000017E7",
+            "Parent": "0x100000200000105",
+            "DisplayName": "Characters",
+            "ExternalId": "",
+            "ShortId": 1394465386
+          }
+        },
+        {
+          "Type": "UserFolder",
+          "Properties": {
+            "TechnicalName": "Ufo_233A1020",
+            "Id": "0x1000002000018B0",
+            "Parent": "0x100000200000105",
+            "DisplayName": "Locations",
+            "ExternalId": "",
+            "ShortId": 591007776
+          }
+        },
+        {
+          "Type": "UserFolder",
+          "Properties": {
+            "TechnicalName": "Ufo_B61EFD14",
+            "Id": "0x1000002000018B5",
+            "Parent": "0x100000200000105",
+            "DisplayName": "Mini Games",
+            "ExternalId": "",
+            "ShortId": 3055484180
           }
         },
         {
@@ -2279,9 +3656,63 @@
         "Type": "Flow",
         "Children": [
           {
-            "Id": "0x1000002000016EF",
-            "TechnicalName": "FFr_4C32E455",
-            "Type": "FlowFragment"
+            "Id": "0x100000200001872",
+            "TechnicalName": "FFr_A8B5C4D4",
+            "Type": "FlowFragment",
+            "Children": [
+              {
+                "Id": "0x100000200001879",
+                "TechnicalName": "Ship_Fragment",
+                "Type": "FlowFragment",
+                "Children": [
+                  {
+                    "Id": "0x100000200001891",
+                    "TechnicalName": "FFr_64A98722",
+                    "Type": "FlowFragment"
+                  },
+                  {
+                    "Id": "0x1000002000018BA",
+                    "TechnicalName": "Hub_FC3F756F",
+                    "Type": "Hub"
+                  },
+                  {
+                    "Id": "0x1000002000018D2",
+                    "TechnicalName": "FFr_AE3FB9B7",
+                    "Type": "FlowFragment"
+                  },
+                  {
+                    "Id": "0x1000002000018F5",
+                    "TechnicalName": "FFr_BB0AB29C",
+                    "Type": "FlowFragment"
+                  },
+                  {
+                    "Id": "0x1000002000018FD",
+                    "TechnicalName": "FFr_A8987170",
+                    "Type": "FlowFragment"
+                  },
+                  {
+                    "Id": "0x100000200001905",
+                    "TechnicalName": "Jmp_7DBD390E",
+                    "Type": "Jump"
+                  },
+                  {
+                    "Id": "0x100000200001951",
+                    "TechnicalName": "FFr_F083DF8D",
+                    "Type": "FlowFragment"
+                  }
+                ]
+              },
+              {
+                "Id": "0x1000002000018A8",
+                "TechnicalName": "FFr_1BE1D6AB",
+                "Type": "FlowFragment"
+              },
+              {
+                "Id": "0x100000200001AA2",
+                "TechnicalName": "Other_Location_Fragment",
+                "Type": "FlowFragment"
+              }
+            ]
           }
         ]
       },
@@ -2293,7 +3724,72 @@
       {
         "Id": "0x3000000AC61A2B3",
         "TechnicalName": "Entities",
-        "Type": "Entities"
+        "Type": "Entities",
+        "Children": [
+          {
+            "Id": "0x10000020000177A",
+            "TechnicalName": "Ufo_0F39E584",
+            "Type": "EntitiesUserFolder",
+            "Children": [
+              {
+                "Id": "0x10000020000186A",
+                "TechnicalName": "Player_Character",
+                "Type": "Entity"
+              },
+              {
+                "Id": "0x1000002000018EC",
+                "TechnicalName": "Ufo_50CE9075",
+                "Type": "EntitiesUserFolder",
+                "Children": [
+                  {
+                    "Id": "0x1000002000018DC",
+                    "TechnicalName": "Ntt_0A812046",
+                    "Type": "Entity"
+                  },
+                  {
+                    "Id": "0x1000002000018E7",
+                    "TechnicalName": "Ntt_256413A5",
+                    "Type": "Entity"
+                  },
+                  {
+                    "Id": "0x1000002000018E3",
+                    "TechnicalName": "Ntt_FAC487F1",
+                    "Type": "Entity"
+                  },
+                  {
+                    "Id": "0x10000020000177C",
+                    "TechnicalName": "Captain_Jones",
+                    "Type": "Entity"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Id": "0x10000020000191E",
+            "TechnicalName": "Ufo_A1481446",
+            "Type": "EntitiesUserFolder",
+            "Children": [
+              {
+                "Id": "0x100000200001957",
+                "TechnicalName": "Ntt_5D619F4D",
+                "Type": "Entity"
+              }
+            ]
+          },
+          {
+            "Id": "0x100000200001B13",
+            "TechnicalName": "Ufo_0EE962F1",
+            "Type": "EntitiesUserFolder",
+            "Children": [
+              {
+                "Id": "0x100000200001B7F",
+                "TechnicalName": "Start_On_Object",
+                "Type": "Entity"
+              }
+            ]
+          }
+        ]
       },
       {
         "Id": "0x30000004C3DAF54",
@@ -2303,7 +3799,65 @@
           {
             "Id": "0x100000200000105",
             "TechnicalName": "Ufo_FA2C7108",
-            "Type": "AssetsUserFolder"
+            "Type": "AssetsUserFolder",
+            "Children": [
+              {
+                "Id": "0x1000002000017E7",
+                "TechnicalName": "Ufo_531DDA6A",
+                "Type": "AssetsUserFolder",
+                "Children": [
+                  {
+                    "Id": "0x1000002000017E9",
+                    "TechnicalName": "Ast_23D0A700",
+                    "Type": "Asset"
+                  },
+                  {
+                    "Id": "0x10000020000186F",
+                    "TechnicalName": "Ast_2C453409",
+                    "Type": "Asset"
+                  },
+                  {
+                    "Id": "0x1000002000018C9",
+                    "TechnicalName": "Ast_F2C66FEF",
+                    "Type": "Asset"
+                  },
+                  {
+                    "Id": "0x1000002000018CC",
+                    "TechnicalName": "Ast_257CB704",
+                    "Type": "Asset"
+                  },
+                  {
+                    "Id": "0x1000002000018CF",
+                    "TechnicalName": "Ast_A562B484",
+                    "Type": "Asset"
+                  }
+                ]
+              },
+              {
+                "Id": "0x1000002000018B0",
+                "TechnicalName": "Ufo_233A1020",
+                "Type": "AssetsUserFolder",
+                "Children": [
+                  {
+                    "Id": "0x1000002000018B2",
+                    "TechnicalName": "Ast_9E45D5C8",
+                    "Type": "Asset"
+                  }
+                ]
+              },
+              {
+                "Id": "0x1000002000018B5",
+                "TechnicalName": "Ufo_B61EFD14",
+                "Type": "AssetsUserFolder",
+                "Children": [
+                  {
+                    "Id": "0x1000002000018B7",
+                    "TechnicalName": "Ast_4A408DDE",
+                    "Type": "Asset"
+                  }
+                ]
+              }
+            ]
           },
           {
             "Id": "0x100000200000107",
@@ -2338,13 +3892,18 @@
             "Type": "Features",
             "Children": [
               {
-                "Id": "0x100000200000008",
-                "TechnicalName": "DefaultBasicCharacterFeature",
+                "Id": "0x100000200001780",
+                "TechnicalName": "Basic_Character_Attributes",
                 "Type": "Feature"
               },
               {
-                "Id": "0x100000200000043",
-                "TechnicalName": "DefaultExtendedCharacterFeature",
+                "Id": "0x100000200001981",
+                "TechnicalName": "Flow_Fragment_Type",
+                "Type": "Feature"
+              },
+              {
+                "Id": "0x100000200001B42",
+                "TechnicalName": "Slot_Feature",
                 "Type": "Feature"
               }
             ]
@@ -2360,21 +3919,84 @@
                 "Type": "TemplateTypeFolder",
                 "Children": [
                   {
-                    "Id": "0x10000020000006B",
-                    "TechnicalName": "DefaultSupportingCharacterTemplate",
-                    "Type": "Template"
+                    "Id": "0x100000200001720",
+                    "TechnicalName": "Ufo_90BCC9FB",
+                    "Type": "TemplateTypeUserFolder",
+                    "Children": [
+                      {
+                        "Id": "0x100000200001722",
+                        "TechnicalName": "NPC",
+                        "Type": "Template"
+                      },
+                      {
+                        "Id": "0x1000002000017EC",
+                        "TechnicalName": "PlayerCharacter",
+                        "Type": "Template"
+                      }
+                    ]
                   },
                   {
-                    "Id": "0x100000200000095",
-                    "TechnicalName": "DefaultMainCharacterTemplate",
-                    "Type": "Template"
+                    "Id": "0x100000200001911",
+                    "TechnicalName": "Ufo_5C58DE25",
+                    "Type": "TemplateTypeUserFolder",
+                    "Children": [
+                      {
+                        "Id": "0x100000200001928",
+                        "TechnicalName": "Station",
+                        "Type": "Template"
+                      }
+                    ]
+                  },
+                  {
+                    "Id": "0x100000200001B69",
+                    "TechnicalName": "Ufo_021423FD",
+                    "Type": "TemplateTypeUserFolder",
+                    "Children": [
+                      {
+                        "Id": "0x100000200001B6B",
+                        "TechnicalName": "Slot_Container",
+                        "Type": "Template"
+                      }
+                    ]
                   }
                 ]
               },
               {
                 "Id": "0x30000006D1BC275",
                 "TechnicalName": "",
-                "Type": "TemplateTypeFolder"
+                "Type": "TemplateTypeFolder",
+                "Children": [
+                  {
+                    "Id": "0x100000200001735",
+                    "TechnicalName": "NPCFragment",
+                    "Type": "Template"
+                  },
+                  {
+                    "Id": "0x10000020000188C",
+                    "TechnicalName": "LocationFragment",
+                    "Type": "Template"
+                  },
+                  {
+                    "Id": "0x1000002000018A0",
+                    "TechnicalName": "MiniGameFragment",
+                    "Type": "Template"
+                  },
+                  {
+                    "Id": "0x1000002000018C1",
+                    "TechnicalName": "PlayerFragment",
+                    "Type": "Template"
+                  },
+                  {
+                    "Id": "0x100000200001920",
+                    "TechnicalName": "StationFragment",
+                    "Type": "Template"
+                  },
+                  {
+                    "Id": "0x1000002000019BF",
+                    "TechnicalName": "Misc_Fragment",
+                    "Type": "Template"
+                  }
+                ]
               },
               {
                 "Id": "0x3000000030B5ACF",

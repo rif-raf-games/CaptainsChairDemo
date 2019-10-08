@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Destination : MonoBehaviour
 {
-    public NPCMove Player;
+    public Player Player;
     public GameObject DestSphere;
 
     private Vector3 CamOffset;
@@ -32,7 +32,7 @@ public class Destination : MonoBehaviour
             {                
                 Vector3 dest = hit.point;                                
                 DestSphere.transform.position = dest;
-                Player.SetDestination(dest);
+                Player.SetNavMeshDestination(dest);
             }
         }
     }
