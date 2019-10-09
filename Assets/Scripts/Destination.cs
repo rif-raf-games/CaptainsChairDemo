@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Destination : MonoBehaviour
 {
-    public Player Player;
+    public PlayerObject Player;
     public GameObject DestSphere;
 
     private Vector3 CamOffset;
