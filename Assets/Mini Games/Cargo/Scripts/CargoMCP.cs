@@ -103,7 +103,7 @@ public class CargoMCP : MonoBehaviour
     {        
         if(CurPuzzle == Puzzles.Length-1)
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }
         else
         {

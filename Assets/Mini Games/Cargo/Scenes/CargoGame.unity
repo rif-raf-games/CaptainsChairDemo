@@ -265,7 +265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameState: 0
   FadeImage: {fileID: 1002715936}
-  PuzzlesToLoad: 01000000020000000300000004000000
+  PuzzlesToLoad: 0100000002000000
   Puzzles: []
   CurPuzzle: 0
 --- !u!1 &705507993

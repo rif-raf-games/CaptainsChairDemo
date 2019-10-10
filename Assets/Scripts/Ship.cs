@@ -74,6 +74,12 @@ public class Ship : CaptainsChairSceneRoot
             if (b.IsValid == true) validBranches.Add(b);
         }
 
+        Debug.Log("wtf:");
+        Debug.Log(aBranches.Count);
+        Debug.Log(aBranches[0].IsValid);
+        Debug.Log(aBranches[0].Target.GetType());
+        Debug.Log("end wtf");
+
         if (aBranches.Count == 1 && aBranches[0].IsValid && aBranches[0].Target.GetType().Equals(typeof(Hub)))
         {
             // only one valid branch and it's a hub so move to it
@@ -110,7 +116,9 @@ public class Ship : CaptainsChairSceneRoot
             }
             else
             {
-                Debug.Log("---------------------------------------------------------------------------------We're in a situation where (BranchCount ==1 && Type==Hub is FALSE....we're waiting for a button press that'll take us to a Jump. If the Jump is to a Hub it goes there via code.  If not, we get back here and wait to figure out what to do");
+                Debug.Log("---------------------------------------------------------------------------------We're in a situation where " +
+                    "(BranchCount ==1 && Type==Hub is FALSE....we're waiting for a button press that'll take us to a Jump." +
+                    " If the Jump is to a Hub it goes there via code.  If not, we get back here and wait to figure out what to do");
                 // waiting for a Continue button press where we'll Jump to a Hub
                 // waiting for a Continue button press where we'll Jump to a mini-game...in this case we come back here since Hub==FALSE...so we have to figure out how to get the mini-game started
                 // FOR MIni-Game: Pause is Jump
