@@ -399,11 +399,11 @@ public class CargoPuzzle : MonoBehaviour
         PuzzleState = ePuzzleState.PLAYING;
     }
 
-    private void OnGUI()
+    /*private void OnGUI()
     {
         if(GUI.Button(new Rect(0, 0, 50, 50), "Hub"))
         {
             SceneManager.LoadScene(0);
         }
-    }
+    }*/
 }

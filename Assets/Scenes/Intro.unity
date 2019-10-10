@@ -755,8 +755,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 998351562}
-  - component: {fileID: 998351563}
   - component: {fileID: 998351564}
+  - component: {fileID: 998351563}
   m_Layer: 0
   m_Name: LoadingLogic
   m_TagString: Untagged
@@ -790,11 +790,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72ed3fe50cbc8754594059fc664a4b21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  articyRef:
-    instanceId: 0
-    referencingMode: 0
-    lowId: 0
-    highId: 0
 --- !u!114 &998351564
 MonoBehaviour:
   m_ObjectHideFlags: 0

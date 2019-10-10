@@ -69,16 +69,10 @@ public class Ship : CaptainsChairSceneRoot
                 s += "Branch " + b.BranchId + ": ";
                 s += d.InputPins[0].Text.RawScript + "\n";                
             }
-            if (s != "") DebugText.text = s;
+            //if (s != "") DebugText.text = s;
             CurBranches.Add(b);            
             if (b.IsValid == true) validBranches.Add(b);
         }
-
-        Debug.Log("wtf:");
-        Debug.Log(aBranches.Count);
-        Debug.Log(aBranches[0].IsValid);
-        Debug.Log(aBranches[0].Target.GetType());
-        Debug.Log("end wtf");
 
         if (aBranches.Count == 1 && aBranches[0].IsValid && aBranches[0].Target.GetType().Equals(typeof(Hub)))
         {
@@ -103,7 +97,7 @@ public class Ship : CaptainsChairSceneRoot
                 else
                 {
                     Debug.Log("only valid output is something else that an OutputPin...so ROCK IT via Play(NextBranch)");
-                    DebugText.text += "chose branch: " + validBranches[0].BranchId;
+                   // DebugText.text += "chose branch: " + validBranches[0].BranchId;
                     NextBranch = validBranches[0];
                     /*Dialogue_Fragment d = (Dialogue_Fragment)NextBranch.Target;
                     if (d.InputPins.Count != 1) Debug.LogWarning("WTF...more than one input pin on this Dialogue_Fragment?: " + d.InputPins.Count);
@@ -129,7 +123,7 @@ public class Ship : CaptainsChairSceneRoot
                 {
                     if (CurPauseObject.GetType().Equals(typeof(Jump)) && validBranches[0].Target.GetType().Equals(typeof(MiniGameFragment)))
                     {
-                        Debug.Log("want to go to a mini-game NOW...we've already clicked on the Continue button");
+                        base.GoToMiniGame(validBranches[0]);                        
                     }
                 }                
                 else Debug.LogWarning("more than 1 valid branch here...not sure what's up.");
@@ -141,6 +135,7 @@ public class Ship : CaptainsChairSceneRoot
     // Update is called once per frame
     void Update()
     {
+        
         if(NextBranch != null)
         {
             Branch b = NextBranch;

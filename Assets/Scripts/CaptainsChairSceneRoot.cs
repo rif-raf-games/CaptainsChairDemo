@@ -5,6 +5,7 @@ using Articy.Unity;
 using Articy.Unity.Interfaces;
 using Articy.Captainschairdemo;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CaptainsChairSceneRoot : MonoBehaviour, IArticyFlowPlayerCallbacks
 {
@@ -25,15 +26,33 @@ public class CaptainsChairSceneRoot : MonoBehaviour, IArticyFlowPlayerCallbacks
 
         FlowPlayer = GetComponent<ArticyFlowPlayer>();
         Slot_Container sc = ArticyDatabase.GetObject<Slot_Container>("Start_On_Object");
-        if(sc.Template.Slot_Feature.Slot_Feature_Slot != null )
+        if (sc.Template.Slot_Feature.Slot_Feature_Slot != null)
         {
+            Debug.Log("CaptainsChairSceneRoot.Start() setting StartOn: " + sc.Template.Slot_Feature.Slot_Feature_Slot.name);
             SetFlowPlayerStartOn(sc.Template.Slot_Feature.Slot_Feature_Slot);
         }
+        else Debug.Log("CaptainsChairSceneRoot.Start() no StartOn");
 
-        DialogueUI.gameObject.SetActive(false);
+        if(DialogueUI != null ) DialogueUI.gameObject.SetActive(false);
         //FlowPlayer.StartOn = sc.Template.Slot_Feature.Slot_Feature_Slot;
     }
     
+    protected void GoToMiniGame(Branch branch)
+    {
+        var miniGameFrag = branch.Target as IObjectWithFeatureMini_Game__Name;
+        if (miniGameFrag != null)
+        {
+            Debug.Log("go to this mini game NOW: " + miniGameFrag.GetFeatureMini_Game__Name().Mini_Game_Name);
+            // FlowPlayer.StartOn = branch.Target as IArticyObject;            
+            Slot_Container slotContainer = ArticyDatabase.GetObject<Slot_Container>("Start_On_Object");
+            slotContainer.Template.Slot_Feature.Slot_Feature_Slot = (ArticyObject)branch.Target;
+            SceneManager.LoadScene(miniGameFrag.GetFeatureMini_Game__Name().Mini_Game_Name);
+        }
+        else
+        {
+            Debug.LogError("ERROR: trying to go to a mini game with no name");
+        }
+    }
     protected void ShutOffDialogueUI()
     {
         DialogueUI.gameObject.SetActive(false);
@@ -74,6 +93,10 @@ public class CaptainsChairSceneRoot : MonoBehaviour, IArticyFlowPlayerCallbacks
         FlowPlayer.StartOn = articyObject;
     }
     
+    protected void PlayFirstBranch()
+    {
+        FlowPlayer.Play(0);
+    }
     protected void PlayNextFlow(Branch b)
     {
         FlowPlayer.Play(b);

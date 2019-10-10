@@ -1,10 +1,12 @@
-﻿using System.Collections;
+﻿using Articy.Captainschairdemo;
+using Articy.Unity;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class CargoMCP : MonoBehaviour
+public class CargoMCP : CaptainsChairSceneRoot
 {
     public enum eGameState { FADE_IN, PLAYING, FADE_OUT, NONE };
     public eGameState GameState;
@@ -13,6 +15,15 @@ public class CargoMCP : MonoBehaviour
     public int[] PuzzlesToLoad;
     public CargoPuzzle[] Puzzles;
     public int CurPuzzle;
+
+    public override void Start()
+    {
+        base.Start();
+
+        GameState = eGameState.NONE;
+        FadeImage.gameObject.SetActive(true);
+        StartCoroutine(LoadPuzzleScenes());
+    }
     IEnumerator LoadPuzzleScenes()
     {
         float startTime = Time.time;
@@ -103,7 +114,18 @@ public class CargoMCP : MonoBehaviour
     {        
         if(CurPuzzle == Puzzles.Length-1)
         {
+            base.PlayFirstBranch();
+            Slot_Container sc = ArticyDatabase.GetObject<Slot_Container>("Start_On_Object");
+            ArticyObject curStartOn = sc.Template.Slot_Feature.Slot_Feature_Slot;
+            var a = curStartOn as IObjectWithFeatureSlot_Feature;
+            if (a != null)
+            {
+                sc.Template.Slot_Feature.Slot_Feature_Slot = a.GetFeatureSlot_Feature().Slot_Feature_Slot;
+            }
+            else Debug.LogError("no slot feature in EndCurrentPuzzle");
+
             SceneManager.LoadScene(1);
+           // SceneManager.LoadScene(1);
         }
         else
         {
@@ -129,12 +151,7 @@ public class CargoMCP : MonoBehaviour
         LerpStartTime = Time.time;
         LerpDurationTime = time;
     }
-    private void Start()
-    {
-        GameState = eGameState.NONE;
-        FadeImage.gameObject.SetActive(true);
-        StartCoroutine(LoadPuzzleScenes());
-    }
+    
    /* private void OnGUI()
     {
         if (GUI.Button(new Rect(0, 0, 50, 50), "Hub"))
