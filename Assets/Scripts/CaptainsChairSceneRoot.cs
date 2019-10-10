@@ -13,13 +13,14 @@ public class CaptainsChairSceneRoot : MonoBehaviour, IArticyFlowPlayerCallbacks
     public GameObject DialogueUI;
     public Image SpeakerImage;
     public Text SpeakerText;
+    //public Button[] DialogueButtons;
     protected virtual void DoOnFlowPlayerPaused(IFlowObject aObject) { }
     protected virtual void DoOnBranchesUpdated(IList<Branch> aBranches) { }
 
     // Start is called before the first frame update
     public virtual void Start()
     {
-        PC = ArticyDatabase.GetObject<PlayerCharacter>("Player_Character");
+        PC = ArticyDatabase.GetObject<PlayerCharacter>("Player_Character_Entity_Tech_Name");
         Debug.Log("Our player name is: " + PC.Template.Basic_Character_Attributes.NPC_Feature_Name);
 
         FlowPlayer = GetComponent<ArticyFlowPlayer>();
@@ -33,10 +34,13 @@ public class CaptainsChairSceneRoot : MonoBehaviour, IArticyFlowPlayerCallbacks
         //FlowPlayer.StartOn = sc.Template.Slot_Feature.Slot_Feature_Slot;
     }
     
-    protected void StartDialogue(Dialogue_Fragment dialogueFrag)
+    protected void ShutOffDialogueUI()
     {
-        DialogueUI.gameObject.SetActive(true);
-        
+        DialogueUI.gameObject.SetActive(false);
+    }
+    protected void ShowDialogueFragment(Dialogue_Fragment dialogueFrag)
+    {
+        DialogueUI.gameObject.SetActive(true);        
         SetSpeakerImage(dialogueFrag.Speaker);
         SpeakerText.text = dialogueFrag.Text;
     }
@@ -74,20 +78,21 @@ public class CaptainsChairSceneRoot : MonoBehaviour, IArticyFlowPlayerCallbacks
     {
         FlowPlayer.Play(b);
     }
-    protected string ReturnBranchInfo(Branch b, string src = "")
+    string GetBranchInfo(Branch b, string src = "")
     {
         string s = "BRANCH INFO (" + src + "): " + b.BranchId.ToString() + ", ";
-        s += b.Target.GetType() + ", ";
+        s += b.Target.GetType() + ", ";                
         s += b.DefaultDescription + ", ";
         s += b.IsValid;
         return s;
     }
+    protected string ReturnBranchInfo(Branch b, string src = "")
+    {
+        return GetBranchInfo(b, src);
+    }
     protected void PrintBranchInfo(Branch b, string src = "")
     {
-        string s = "BRANCH INFO (" + src + "): " + b.BranchId.ToString() + ", ";
-        s += b.Target.GetType() + ", ";
-        s += b.DefaultDescription + ", ";
-        s += b.IsValid;
+        string s = GetBranchInfo(b, src);
         Debug.Log(s);
     }
     // Update is called once per frame

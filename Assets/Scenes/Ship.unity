@@ -167,6 +167,7 @@ MonoBehaviour:
   DialogueUI: {fileID: 1643175239}
   SpeakerImage: {fileID: 850038398}
   SpeakerText: {fileID: 945684158}
+  DebugText: {fileID: 298052062}
 --- !u!114 &171133665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,6 +262,85 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c7cfa171f16d7e49a7c147f53d66cae, type: 3}
+--- !u!1 &298052060
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 298052061}
+  - component: {fileID: 298052063}
+  - component: {fileID: 298052062}
+  m_Layer: 5
+  m_Name: DebugText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &298052061
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298052060}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1643175243}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -160.19, y: -87.44}
+  m_SizeDelta: {x: 1000, y: 500}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &298052062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298052060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: New Text
+--- !u!222 &298052063
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298052060}
+  m_CullTransparentMesh: 0
 --- !u!1 &602499330
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,6 +353,7 @@ GameObject:
   - component: {fileID: 602499333}
   - component: {fileID: 602499332}
   - component: {fileID: 602499331}
+  - component: {fileID: 602499335}
   m_Layer: 0
   m_Name: Cargo Station
   m_TagString: Untagged
@@ -354,6 +435,23 @@ Transform:
   m_Father: {fileID: 1409269512}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &602499335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602499330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 461291041, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reference:
+    instanceId: 0
+    referencingMode: 0
+    lowId: 6481
+    highId: 16777218
 --- !u!1 &719561867
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,7 +465,7 @@ GameObject:
   - component: {fileID: 719561870}
   - component: {fileID: 719561869}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Button 0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -435,7 +533,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 719561870}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 171133664}
+        m_MethodName: DialogueButtonCallback
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &719561870
@@ -734,7 +843,7 @@ GameObject:
   - component: {fileID: 945684159}
   - component: {fileID: 945684158}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Dialogue Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1201,7 +1310,6 @@ GameObject:
   - component: {fileID: 1220221812}
   - component: {fileID: 1220221811}
   - component: {fileID: 1220221815}
-  - component: {fileID: 1220221816}
   m_Layer: 0
   m_Name: Captain Jones
   m_TagString: Untagged
@@ -1277,7 +1385,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1220221810}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -116.99, y: 30, z: 6.65}
+  m_LocalPosition: {x: -112.3, y: 30, z: 6.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1154065023}
@@ -1301,18 +1409,6 @@ MonoBehaviour:
     referencingMode: 0
     lowId: 6289
     highId: 16777218
---- !u!114 &1220221816
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1220221810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5c6f30a1f552094baeb7f5967510da2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1227725826
 GameObject:
   m_ObjectHideFlags: 0
@@ -1417,6 +1513,7 @@ GameObject:
   - component: {fileID: 1243771218}
   - component: {fileID: 1243771217}
   - component: {fileID: 1243771216}
+  - component: {fileID: 1243771220}
   m_Layer: 0
   m_Name: Joe
   m_TagString: Untagged
@@ -1499,6 +1596,23 @@ Transform:
   m_Father: {fileID: 1409269512}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1243771220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243771215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 461291041, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reference:
+    instanceId: 0
+    referencingMode: 0
+    lowId: 6389
+    highId: 16777218
 --- !u!1 &1409269511
 GameObject:
   m_ObjectHideFlags: 0
@@ -1720,6 +1834,7 @@ RectTransform:
   - {fileID: 2065653880}
   - {fileID: 945684157}
   - {fileID: 719561868}
+  - {fileID: 298052061}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1740,6 +1855,7 @@ GameObject:
   - component: {fileID: 1778674260}
   - component: {fileID: 1778674259}
   - component: {fileID: 1778674258}
+  - component: {fileID: 1778674262}
   m_Layer: 0
   m_Name: Gene
   m_TagString: Untagged
@@ -1815,13 +1931,30 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1778674257}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -137.19, y: 30.01, z: 6.69}
+  m_LocalPosition: {x: -137.19, y: 30.01, z: 7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1227725827}
   m_Father: {fileID: 1409269512}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1778674262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778674257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 461291041, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reference:
+    instanceId: 0
+    referencingMode: 0
+    lowId: 6354
+    highId: 16777218
 --- !u!1 &1802201901
 GameObject:
   m_ObjectHideFlags: 0
@@ -1995,6 +2128,7 @@ GameObject:
   - component: {fileID: 1937593874}
   - component: {fileID: 1937593873}
   - component: {fileID: 1937593872}
+  - component: {fileID: 1937593876}
   m_Layer: 0
   m_Name: Jane
   m_TagString: Untagged
@@ -2070,13 +2204,30 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1937593871}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -129.74, y: 30.01, z: 4.11}
+  m_LocalPosition: {x: -125.54, y: 30.01, z: 4.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1802201902}
   m_Father: {fileID: 1409269512}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1937593876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937593871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 461291041, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reference:
+    instanceId: 0
+    referencingMode: 0
+    lowId: 6397
+    highId: 16777218
 --- !u!1 &2065653879
 GameObject:
   m_ObjectHideFlags: 0
@@ -2089,7 +2240,7 @@ GameObject:
   - component: {fileID: 2065653882}
   - component: {fileID: 2065653881}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Dialogue Text BG Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
