@@ -9,29 +9,40 @@ using UnityEngine.SceneManagement;
 
 public class CaptainsChairSceneRoot : MonoBehaviour, IArticyFlowPlayerCallbacks
 {
-    protected PlayerCharacter PC;
-    ArticyFlowPlayer FlowPlayer;
+    [SerializeField]
+    protected PlayerObject PlayerObject;
     public GameObject DialogueUI;
     public Image SpeakerImage;
     public Text SpeakerText;
+    ArticyFlowPlayer FlowPlayer;
     //public Button[] DialogueButtons;
     protected virtual void DoOnFlowPlayerPaused(IFlowObject aObject) { }
     protected virtual void DoOnBranchesUpdated(IList<Branch> aBranches) { }
 
+    void FlowDebug(string s)
+    {
+        //Debug.Log(s);
+    }
     // Start is called before the first frame update
     public virtual void Start()
     {
-        PC = ArticyDatabase.GetObject<PlayerCharacter>("Player_Character_Entity_Tech_Name");
-        Debug.Log("Our player name is: " + PC.Template.Basic_Character_Attributes.NPC_Feature_Name);
+        PlayerCharacter PC = ArticyDatabase.GetObject<PlayerCharacter>("Player_Character_Entity_Tech_Name");
+        //Debug.Log("Our player name is: " + PC.Template.Basic_Character_Attributes.NPC_Feature_Name);
+        FlowDebug("Our player name is: " + PC.Template.Basic_Character_Attributes.NPC_Feature_Name);
 
         FlowPlayer = GetComponent<ArticyFlowPlayer>();
         Slot_Container sc = ArticyDatabase.GetObject<Slot_Container>("Start_On_Object");
         if (sc.Template.Slot_Feature.Slot_Feature_Slot != null)
         {
-            Debug.Log("CaptainsChairSceneRoot.Start() setting StartOn: " + sc.Template.Slot_Feature.Slot_Feature_Slot.name);
+            //Debug.Log("CaptainsChairSceneRoot.Start() setting StartOn: " + sc.Template.Slot_Feature.Slot_Feature_Slot.name);
+            FlowDebug("CaptainsChairSceneRoot.Start() setting StartOn: " + sc.Template.Slot_Feature.Slot_Feature_Slot.name);
             SetFlowPlayerStartOn(sc.Template.Slot_Feature.Slot_Feature_Slot);
         }
-        else Debug.Log("CaptainsChairSceneRoot.Start() no StartOn");
+        else
+        {
+            //Debug.Log("CaptainsChairSceneRoot.Start() no StartOn");
+            FlowDebug("CaptainsChairSceneRoot.Start() no StartOn");
+        }
 
         if(DialogueUI != null ) DialogueUI.gameObject.SetActive(false);
         //FlowPlayer.StartOn = sc.Template.Slot_Feature.Slot_Feature_Slot;
@@ -42,7 +53,8 @@ public class CaptainsChairSceneRoot : MonoBehaviour, IArticyFlowPlayerCallbacks
         var miniGameFrag = branch.Target as IObjectWithFeatureMini_Game__Name;
         if (miniGameFrag != null)
         {
-            Debug.Log("go to this mini game NOW: " + miniGameFrag.GetFeatureMini_Game__Name().Mini_Game_Name);
+            //Debug.Log("go to this mini game NOW: " + miniGameFrag.GetFeatureMini_Game__Name().Mini_Game_Name);
+            FlowDebug("go to this mini game NOW: " + miniGameFrag.GetFeatureMini_Game__Name().Mini_Game_Name);
             // FlowPlayer.StartOn = branch.Target as IArticyObject;            
             Slot_Container slotContainer = ArticyDatabase.GetObject<Slot_Container>("Start_On_Object");
             slotContainer.Template.Slot_Feature.Slot_Feature_Slot = (ArticyObject)branch.Target;
@@ -50,18 +62,23 @@ public class CaptainsChairSceneRoot : MonoBehaviour, IArticyFlowPlayerCallbacks
         }
         else
         {
-            Debug.LogError("ERROR: trying to go to a mini game with no name");
+            //Debug.LogError("ERROR: trying to go to a mini game with no name");
+            FlowDebug("ERROR: trying to go to a mini game with no name");
         }
     }
     protected void ShutOffDialogueUI()
     {
         DialogueUI.gameObject.SetActive(false);
+
+        PlayerObject.ToggleMovementBlocked(false);
     }
     protected void ShowDialogueFragment(Dialogue_Fragment dialogueFrag)
     {
         DialogueUI.gameObject.SetActive(true);        
         SetSpeakerImage(dialogueFrag.Speaker);
         SpeakerText.text = dialogueFrag.Text;
+
+        PlayerObject.ToggleMovementBlocked(true);
     }
     protected void SetSpeakerImage(ArticyObject speaker)
     {        
@@ -89,7 +106,8 @@ public class CaptainsChairSceneRoot : MonoBehaviour, IArticyFlowPlayerCallbacks
     }
     public void SetFlowPlayerStartOn( ArticyObject articyObject )
     {
-        Debug.Log("SetFlowPlayerStartOn(): type: " + articyObject.GetType() + ", name: " + articyObject.name);
+        //Debug.Log("SetFlowPlayerStartOn(): type: " + articyObject.GetType() + ", name: " + articyObject.name);
+        FlowDebug("SetFlowPlayerStartOn(): type: " + articyObject.GetType() + ", name: " + articyObject.name);
         FlowPlayer.StartOn = articyObject;
     }
     
@@ -116,7 +134,8 @@ public class CaptainsChairSceneRoot : MonoBehaviour, IArticyFlowPlayerCallbacks
     protected void PrintBranchInfo(Branch b, string src = "")
     {
         string s = GetBranchInfo(b, src);
-        Debug.Log(s);
+        //Debug.Log(s);
+        FlowDebug(s);
     }
     // Update is called once per frame
     void Update()

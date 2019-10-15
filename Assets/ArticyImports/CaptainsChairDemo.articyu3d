@@ -5,7 +5,7 @@
     "set_IncludedNodes": "Settings, Project, GlobalVariables, ObjectDefinitions, Packages, ScriptMethods, Hierarchy, Assets",
     "set_UseScriptSupport": "True",
     "ExportVersion": "1.1",
-    "ObjectDefinitionsHash": "1238D125DC085A5EE88E36F06711AE936B3768EA7B84AEA40B7081506402E9BA",
+    "ObjectDefinitionsHash": "7F420FFB04CE35AC226424A0646E82BABDEB22638F90EC3113738C8FFC0E7B33",
     "ScriptFragmentsHash": "3359737610"
   },
   "Project": {
@@ -51,6 +51,18 @@
         },
         {
           "Variable": "spokeToCaptainTwice",
+          "Type": "Boolean",
+          "Value": "False",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Namespace": "Captain",
+      "Description": "",
+      "Variables": [
+        {
+          "Variable": "spokeTo",
           "Type": "Boolean",
           "Value": "False",
           "Description": ""
@@ -6361,6 +6373,11 @@
         "Children": [
           {
             "Id": "0x100000200001C0D",
+            "TechnicalName": "",
+            "Type": "VariableSet"
+          },
+          {
+            "Id": "0x100000200001E46",
             "TechnicalName": "",
             "Type": "VariableSet"
           }

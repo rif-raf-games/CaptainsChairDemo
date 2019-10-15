@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class Ship : CaptainsChairSceneRoot
 {
-    public Text DebugText;
+   // public Text DebugText;
     Branch NextBranch = null;
     IFlowObject CurPauseObject = null;
     List<Branch> CurBranches = new List<Branch>();
@@ -18,10 +18,16 @@ public class Ship : CaptainsChairSceneRoot
         base.Start();
     }
 
+    void FlowDebug(string s)
+    {
+        //Debug.Log(s);
+    }
     protected override void DoOnFlowPlayerPaused(IFlowObject aObject)
     {
-        Debug.Log("**********************************************************************DoOnFlowPlayerPaused()");
-        Debug.Log("OnFlowPlayerPaused() IFlowObject Type: " + aObject.GetType() + ", with TechnicalName: " + ((ArticyObject)aObject).TechnicalName);
+        // Debug.Log("**********************************************************************DoOnFlowPlayerPaused()");
+        //Debug.Log("OnFlowPlayerPaused() IFlowObject Type: " + aObject.GetType() + ", with TechnicalName: " + ((ArticyObject)aObject).TechnicalName);
+        FlowDebug("**********************************************************************DoOnFlowPlayerPaused()");
+        FlowDebug("OnFlowPlayerPaused() IFlowObject Type: " + aObject.GetType() + ", with TechnicalName: " + ((ArticyObject)aObject).TechnicalName);
         CurPauseObject = aObject;
         // Note...a Dialogue Fragment is NOT a Flow Fragment
         var flowFragType = aObject as IObjectWithFeatureFlow_Fragment_Type;
@@ -29,16 +35,21 @@ public class Ship : CaptainsChairSceneRoot
         {
             Flow_Fragment_Type type = flowFragType.GetFeatureFlow_Fragment_Type().Flow_Fragment_Type;
             FlowFragment flowFrag = aObject as FlowFragment;
-            Debug.Log("Fragment name: " + flowFrag.DisplayName + ", has text: " + flowFrag.Text);
-            Debug.Log("enum val: " + type);
+            //Debug.Log("Fragment name: " + flowFrag.DisplayName + ", has text: " + flowFrag.Text);
+            //Debug.Log("enum val: " + type);
+            FlowDebug("Fragment name: " + flowFrag.DisplayName + ", has text: " + flowFrag.Text);
+            FlowDebug("enum val: " + type);
         }
         var dialogueFrag = aObject as Dialogue_Fragment;
         if(dialogueFrag != null )
         {
-            Debug.Log("We have a dialogue fragment...so DO SOMETHING");
+            //Debug.Log("We have a dialogue fragment...so DO SOMETHING");
+            FlowDebug("We have a dialogue fragment...so DO SOMETHING");
+            Debug.Log("Ship.DoOnFlowPlayerPaused() about to show dialogue fragment");
             base.ShowDialogueFragment(dialogueFrag);            
         }
-        Debug.Log("**********DoOnFlowPlayerPaused() END");
+        //Debug.Log("**********DoOnFlowPlayerPaused() END");
+        FlowDebug("**********DoOnFlowPlayerPaused() END");
     }
 
     public void DialogueButtonCallback( int buttonIndex )
@@ -47,16 +58,23 @@ public class Ship : CaptainsChairSceneRoot
         base.PrintBranchInfo(CurBranches[buttonIndex], "DialogueButtonCallback");
         if(CurBranches[buttonIndex].GetType().Equals(typeof(Dialogue_Fragment)) == false)
         {
-            Debug.Log("we're done with the current dialogue tree, so shut off the UI and let the flow handle itself");
+            //Debug.Log("we're done with the current dialogue tree, so shut off the UI and let the flow handle itself");
+            FlowDebug("we're done with the current dialogue tree, so shut off the UI and let the flow handle itself");
             base.ShutOffDialogueUI();
-        }            
+        }  
+        else
+        {
+            Debug.LogWarning("Need to account for a flow fragment off of a dialogue UI button press");
+        }
     }
 
     protected override void DoOnBranchesUpdated(IList<Branch> aBranches)
     {        
-        Debug.Log("**********DoOnBranchesUpdated()");        
-        Debug.Log("Num branches: " + aBranches.Count);
-       
+        //Debug.Log("**********DoOnBranchesUpdated()");        
+        //Debug.Log("Num branches: " + aBranches.Count);
+        FlowDebug("**********DoOnBranchesUpdated()");
+        FlowDebug("Num branches: " + aBranches.Count);
+
         List<Branch> validBranches = new List<Branch>();
         CurBranches.Clear();
         string s = "";
@@ -77,7 +95,9 @@ public class Ship : CaptainsChairSceneRoot
         if (aBranches.Count == 1 && aBranches[0].IsValid && aBranches[0].Target.GetType().Equals(typeof(Hub)))
         {
             // only one valid branch and it's a hub so move to it
-            Debug.Log("only one valid branch and it's a hub called: " + aBranches[0].DefaultDescription + " so Play() it");
+            //Debug.Log("only one valid branch and it's a hub called: " + aBranches[0].DefaultDescription + " so Play() it");
+            FlowDebug("only one valid branch and it's a hub called: " + aBranches[0].DefaultDescription + " so Play() it");
+
             NextBranch = aBranches[0];
             base.PrintBranchInfo(NextBranch, "move to hub");
             //inventorySystem.RemoveItem(heldItem);
@@ -89,15 +109,18 @@ public class Ship : CaptainsChairSceneRoot
             {
                 s = "1 valid branch on a hub...check what it is: ";
                 s += base.ReturnBranchInfo(validBranches[0], "checking 1 branch on hub");
-                Debug.Log(s);
+                //Debug.Log(s);
+                FlowDebug(s);
                 if(validBranches[0].Target.GetType().Equals(typeof(OutputPin)))
                 {
-                    Debug.Log("only valid output is an OutputPin...which is odd but fuck it we stay here since we're obviously expected to have the next bit triggered by a collision");
+                    //Debug.Log("only valid output is an OutputPin...which is odd but fuck it we stay here since we're obviously expected to have the next bit triggered by a collision");
+                    FlowDebug("only valid output is an OutputPin...which is odd but fuck it we stay here since we're obviously expected to have the next bit triggered by a collision");
                 }
                 else
                 {
-                    Debug.Log("only valid output is something else that an OutputPin...so ROCK IT via Play(NextBranch)");
-                   // DebugText.text += "chose branch: " + validBranches[0].BranchId;
+                    //Debug.Log("only valid output is something else that an OutputPin...so ROCK IT via Play(NextBranch)");
+                    FlowDebug("only valid output is something else that an OutputPin...so ROCK IT via Play(NextBranch)");
+                    // DebugText.text += "chose branch: " + validBranches[0].BranchId;
                     NextBranch = validBranches[0];
                     /*Dialogue_Fragment d = (Dialogue_Fragment)NextBranch.Target;
                     if (d.InputPins.Count != 1) Debug.LogWarning("WTF...more than one input pin on this Dialogue_Fragment?: " + d.InputPins.Count);
@@ -110,26 +133,36 @@ public class Ship : CaptainsChairSceneRoot
             }
             else
             {
-                Debug.Log("---------------------------------------------------------------------------------We're in a situation where " +
+                //Debug.Log("---------------------------------------------------------------------------------We're in a situation where " +
+                  //  "(BranchCount ==1 && Type==Hub is FALSE....we're waiting for a button press that'll take us to a Jump." +
+                   // " If the Jump is to a Hub it goes there via code.  If not, we get back here and wait to figure out what to do");
+                FlowDebug("---------------------------------------------------------------------------------We're in a situation where " +
                     "(BranchCount ==1 && Type==Hub is FALSE....we're waiting for a button press that'll take us to a Jump." +
                     " If the Jump is to a Hub it goes there via code.  If not, we get back here and wait to figure out what to do");
                 // waiting for a Continue button press where we'll Jump to a Hub
                 // waiting for a Continue button press where we'll Jump to a mini-game...in this case we come back here since Hub==FALSE...so we have to figure out how to get the mini-game started
                 // FOR MIni-Game: Pause is Jump
                 // Branch is to MiniGameFragment
-                Debug.Log("Still in situation above.  CurPauseObject type: " + CurPauseObject.GetType());
-                Debug.Log("first branch type: " + validBranches[0].Target.GetType());
-                if(validBranches.Count == 1 )
+                //Debug.Log("Still in situation above.  CurPauseObject type: " + CurPauseObject.GetType());                
+                //Debug.Log("first branch type: " + validBranches[0].Target.GetType());
+                FlowDebug("Still in situation above.  CurPauseObject type: " + CurPauseObject.GetType());
+                FlowDebug("first branch type: " + validBranches[0].Target.GetType());
+                if (validBranches.Count == 1)
                 {
                     if (CurPauseObject.GetType().Equals(typeof(Jump)) && validBranches[0].Target.GetType().Equals(typeof(MiniGameFragment)))
                     {
-                        base.GoToMiniGame(validBranches[0]);                        
+                        base.GoToMiniGame(validBranches[0]);
                     }
-                }                
-                else Debug.LogWarning("more than 1 valid branch here...not sure what's up.");
+                }
+                else
+                {
+                    //Debug.LogWarning("more than 1 valid branch here...not sure what's up.");
+                    FlowDebug("more than 1 valid branch here...not sure what's up.");
+                }
             }
         }
-        Debug.Log("************************************************************DoOnBranchesUpdated() END");
+       // Debug.Log("************************************************************DoOnBranchesUpdated() END");
+       FlowDebug("************************************************************DoOnBranchesUpdated() END");
     }
 
     // Update is called once per frame
