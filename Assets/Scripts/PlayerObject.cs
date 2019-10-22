@@ -35,55 +35,32 @@ public class PlayerObject : MonoBehaviour
     {
         MovementBlocked = val;
     }
-    void FlowDebug(string s)
-    {        
-        //Debug.Log(s);
-    }
+    
     private void OnTriggerEnter(Collider other)
-    {
-        //Debug.Log(this.name + " OnTriggerEnter() other: " + other.name);
-        FlowDebug(this.name + " OnTriggerEnter() other: " + other.name);
-        GameObject go = other.gameObject;        
-        ArticyReference artReference = go.GetComponent<ArticyReference>();
-        if(artReference == null )
+    {        
+        StaticStuff.FlowDebug(this.name + " OnTriggerEnter() other: " + other.name);
+        
+        ArticyReference colliderArtRef = other.gameObject.GetComponent<ArticyReference>();
+        if(colliderArtRef == null )
         {
             //Debug.LogWarning("null ArticyReference on the thing we collided with.");
-            FlowDebug("null ArticyReference on the thing we collided with.");
+            StaticStuff.FlowDebugWarning("null ArticyReference on the thing we collided with.");
         }
         else
         {
             //Debug.Log("we connected with something that has an ArticyRef.  Now lets see if it's an NPC.");
-            FlowDebug("we connected with something that has an ArticyRef.  Now lets see if it's an NPC.");
-            ArticyRef artRef = artReference.reference;
-            FlowFragment flowFrag = (FlowFragment)artRef;
-            List<ArticyObject> attachments = flowFrag.Attachments;
-            if(attachments.Count == 1 )
+            StaticStuff.FlowDebug("we connected with something that has an ArticyRef.  Now lets see what it is.");                               
+            Dialogue dialogue = colliderArtRef.reference.GetObject() as Dialogue;            
+            if(dialogue != null)
             {
-                ArticyObject ao = attachments[0];
-                //Debug.Log("flowFrag attachment[0] type: " + ao.GetType());                
-                FlowDebug("flowFrag attachment[0] type: " + ao.GetType());
-                
-                if(ao.GetType().Equals(typeof(NPC)))
-                {
-                    NPC npc = (NPC)ao;
-                    ArticyObject ao2 = (ArticyObject)artRef;
-                    //Debug.Log("this mofo we collided with is an NPC, so set the FlowPlayer to start on it.");
-                    FlowDebug("this mofo we collided with is an NPC, so set the FlowPlayer to start on it.");
-                    Debug.Log("PlayerObject.OnTriggerEnter() about to SetFlowPlayerStartOn(ao2): " + ao2.TechnicalName);
-                    SceneRoot.SetFlowPlayerStartOn(ao2);
-                    NavMeshAgent.SetDestination(this.transform.position);
-                }
-                else
-                {
-                    //Debug.LogWarning("the first attachment is NOT an NPC");
-                    FlowDebug("the first attachment is NOT an NPC");
-                }
+                StaticStuff.FlowDebug("we have a dialogue, so set the FlowPlayer to start on it");
+                SceneRoot.SetFlowPlayerStartOn(dialogue);
+                NavMeshAgent.SetDestination(this.transform.position);
             }
             else
             {
-                // Debug.LogWarning("not sure if we need a warning but i'm expecting only 1 attachment, which should be an NPC");
-                FlowDebug("not sure if we need a warning but i'm expecting only 1 attachment, which should be an NPC");
-            }
+                StaticStuff.FlowDebugWarning("not sure what to do with this type yet: " + colliderArtRef.reference.GetObject().GetType());
+            }            
         }
     }
     private void OnTriggerExit(Collider other)
