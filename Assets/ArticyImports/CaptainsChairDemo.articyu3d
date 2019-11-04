@@ -6,7 +6,7 @@
     "set_UseScriptSupport": "True",
     "ExportVersion": "1.1",
     "ObjectDefinitionsHash": "CB2E1256822676B3AF1B50122FE5341D94FD6C645267E7C7D91F9A267FA5E637",
-    "ScriptFragmentsHash": "1815582947"
+    "ScriptFragmentsHash": "1378589269"
   },
   "Project": {
     "Name": "CaptainsChairDemo",
@@ -2981,10 +2981,177 @@
         {
           "Type": "Dialogue_Fragment",
           "Properties": {
-            "TechnicalName": "DFr_2C8AB953",
-            "Id": "0x100000200001FDE",
+            "TechnicalName": "DFr_0099F76B",
+            "Id": "0x100000200001E99",
             "Parent": "0x100000200001E74",
-            "MenuText": "Sigh",
+            "MenuText": "First Talk.",
+            "StageDirections": "",
+            "Speaker": "0x100000200001957",
+            "Color": {
+              "r": 0.08627451,
+              "g": 0.2627451,
+              "b": 0.654902
+            },
+            "Text": "Speak to Captain.",
+            "ExternalId": "",
+            "Position": {
+              "x": 175.0,
+              "y": 425.0
+            },
+            "ZIndex": 1.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 10090347,
+            "InputPins": [
+              {
+                "Text": "Cargo_Game.spokeToCaptainOnce == false",
+                "Id": "0x100000200001E9A",
+                "Owner": "0x100000200001E99"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000200001E9B",
+                "Owner": "0x100000200001E99",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "what the fuck is this\r\n",
+                    "TargetPin": "0x100000200001FD8",
+                    "Target": "0x100000200001FD5"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "Dialogue_Fragment_Default_Button_Text": {
+              "Default_Button_Text": ""
+            }
+          }
+        },
+        {
+          "Type": "Dialogue_Fragment",
+          "Properties": {
+            "TechnicalName": "DFr_09BDE622",
+            "Id": "0x100000200001EA5",
+            "Parent": "0x100000200001E74",
+            "MenuText": "Second Talk.",
+            "StageDirections": "",
+            "Speaker": "0x100000200001957",
+            "Color": {
+              "r": 0.08627451,
+              "g": 0.2627451,
+              "b": 0.654902
+            },
+            "Text": "Speak to rest of crew.",
+            "ExternalId": "",
+            "Position": {
+              "x": 450.0,
+              "y": 650.0
+            },
+            "ZIndex": 17.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 163440162,
+            "InputPins": [
+              {
+                "Text": "Cargo_Game.spokeToCaptainOnce == true &&\n(Cargo_Game.spokeToJoeOnce == false ||\nCargo_Game.spokeToJaneOnce == false ||\nCargo_Game.spokeToGeneOnce == false) &&\nCargo_Game.playedCargoGame == false",
+                "Id": "0x100000200001EA6",
+                "Owner": "0x100000200001EA5"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000200001EA7",
+                "Owner": "0x100000200001EA5",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000200001FE1",
+                    "Target": "0x100000200001FDE"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "Dialogue_Fragment_Default_Button_Text": {
+              "Default_Button_Text": ""
+            }
+          }
+        },
+        {
+          "Type": "Dialogue_Fragment",
+          "Properties": {
+            "TechnicalName": "DFr_A7085A8D",
+            "Id": "0x100000200001EAC",
+            "Parent": "0x100000200001E74",
+            "MenuText": "Third Talk.",
+            "StageDirections": "",
+            "Speaker": "0x100000200001957",
+            "Color": {
+              "r": 0.08627451,
+              "g": 0.2627451,
+              "b": 0.654902
+            },
+            "Text": "Speak to Captain again.",
+            "ExternalId": "",
+            "Position": {
+              "x": 450.0,
+              "y": 875.0
+            },
+            "ZIndex": 15.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 2802342541,
+            "InputPins": [
+              {
+                "Text": "Cargo_Game.spokeToCaptainOnce == true &&\nCargo_Game.spokeToJoeOnce == true && \nCargo_Game.spokeToJaneOnce == true &&\nCargo_Game.spokeToGeneOnce == true &&\nCargo_Game.spokeToCaptainTwice == false",
+                "Id": "0x100000200001EAD",
+                "Owner": "0x100000200001EAC"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000200001EAE",
+                "Owner": "0x100000200001EAC"
+              }
+            ]
+          },
+          "Template": {
+            "Dialogue_Fragment_Default_Button_Text": {
+              "Default_Button_Text": ""
+            }
+          }
+        },
+        {
+          "Type": "Dialogue_Fragment",
+          "Properties": {
+            "TechnicalName": "DFr_D0DE3D37",
+            "Id": "0x100000200001EB3",
+            "Parent": "0x100000200001E74",
+            "MenuText": "No",
             "StageDirections": "",
             "Speaker": "0x10000020000186A",
             "Color": {
@@ -2992,30 +3159,30 @@
               "g": 0.2627451,
               "b": 0.654902
             },
-            "Text": "*Sigh*  Bit of a wad, aren't you?",
+            "Text": "No, I am not ready to play.",
             "ExternalId": "",
             "Position": {
-              "x": 825.0,
-              "y": 650.0
+              "x": 1225.0,
+              "y": 1325.0
             },
-            "ZIndex": 29.0,
+            "ZIndex": 18.0,
             "Size": {
               "w": 225.0,
               "h": 200.0
             },
-            "ShortId": 747288915,
+            "ShortId": 3504225591,
             "InputPins": [
               {
                 "Text": "",
-                "Id": "0x100000200001FE1",
-                "Owner": "0x100000200001FDE"
+                "Id": "0x100000200001EB4",
+                "Owner": "0x100000200001EB3"
               }
             ],
             "OutputPins": [
               {
                 "Text": "",
-                "Id": "0x100000200001FE2",
-                "Owner": "0x100000200001FDE",
+                "Id": "0x100000200001EB5",
+                "Owner": "0x100000200001EB3",
                 "Connections": [
                   {
                     "Color": {
@@ -3034,7 +3201,329 @@
           },
           "Template": {
             "Dialogue_Fragment_Default_Button_Text": {
-              "Default_Button_Text": "Leave in a huff"
+              "Default_Button_Text": ""
+            }
+          }
+        },
+        {
+          "Type": "Dialogue_Fragment",
+          "Properties": {
+            "TechnicalName": "DFr_6223DFD0",
+            "Id": "0x100000200001EBA",
+            "Parent": "0x100000200001E74",
+            "MenuText": "Wise ass",
+            "StageDirections": "",
+            "Speaker": "0x10000020000186A",
+            "Color": {
+              "r": 0.08627451,
+              "g": 0.2627451,
+              "b": 0.654902
+            },
+            "Text": "Bite me, you jerk machine.  I'll come back later.",
+            "ExternalId": "",
+            "Position": {
+              "x": 1225.0,
+              "y": 1550.0
+            },
+            "ZIndex": 18.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 1646518224,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000200001EBB",
+                "Owner": "0x100000200001EBA"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000200001EBC",
+                "Owner": "0x100000200001EBA",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000200002036",
+                    "Target": "0x100000200001E74"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "Dialogue_Fragment_Default_Button_Text": {
+              "Default_Button_Text": ""
+            }
+          }
+        },
+        {
+          "Type": "Dialogue_Fragment",
+          "Properties": {
+            "TechnicalName": "DFr_F58F8888",
+            "Id": "0x100000200001EC1",
+            "Parent": "0x100000200001E74",
+            "MenuText": "Greet Player before asking to play Cargo game.",
+            "StageDirections": "",
+            "Speaker": "0x100000200001957",
+            "Color": {
+              "r": 0.08627451,
+              "g": 0.2627451,
+              "b": 0.654902
+            },
+            "Text": "Greetings, [Player_Character_Entity_Tech_Name.Basic_Character_Attributes.NPC_Feature_Name].  I see you are ready for the Cargo game.",
+            "ExternalId": "",
+            "Position": {
+              "x": 375.0,
+              "y": 1225.0
+            },
+            "ZIndex": 26.0,
+            "Size": {
+              "w": 375.0,
+              "h": 225.0
+            },
+            "ShortId": 4119824520,
+            "InputPins": [
+              {
+                "Text": "Cargo_Game.spokeToCaptainTwice == true && \nCargo_Game.playedCargoGame == false",
+                "Id": "0x100000200001EC2",
+                "Owner": "0x100000200001EC1"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000200001EC3",
+                "Owner": "0x100000200001EC1",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000200001ED0",
+                    "Target": "0x100000200001ECF"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "Dialogue_Fragment_Default_Button_Text": {
+              "Default_Button_Text": ""
+            }
+          }
+        },
+        {
+          "Type": "Dialogue_Fragment",
+          "Properties": {
+            "TechnicalName": "DFr_260FD5A5",
+            "Id": "0x100000200001EC8",
+            "Parent": "0x100000200001E74",
+            "MenuText": "Game done\r\n",
+            "StageDirections": "",
+            "Speaker": "0x100000200001957",
+            "Color": {
+              "r": 0.08627451,
+              "g": 0.2627451,
+              "b": 0.654902
+            },
+            "Text": "We're done.",
+            "ExternalId": "",
+            "Position": {
+              "x": 425.0,
+              "y": 1700.0
+            },
+            "ZIndex": 5.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 638571941,
+            "InputPins": [
+              {
+                "Text": "Cargo_Game.playedCargoGame == true",
+                "Id": "0x100000200001EC9",
+                "Owner": "0x100000200001EC8"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000200001ECA",
+                "Owner": "0x100000200001EC8",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000200002036",
+                    "Target": "0x100000200001E74"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "Dialogue_Fragment_Default_Button_Text": {
+              "Default_Button_Text": "Onto other adventures"
+            }
+          }
+        },
+        {
+          "Type": "Dialogue_Fragment",
+          "Properties": {
+            "TechnicalName": "DFr_68F703F0",
+            "Id": "0x100000200001ECF",
+            "Parent": "0x100000200001E74",
+            "MenuText": "Ask to play.",
+            "StageDirections": "",
+            "Speaker": "0x100000200001957",
+            "Color": {
+              "r": 0.08627451,
+              "g": 0.2627451,
+              "b": 0.654902
+            },
+            "Text": "Would you like to play the Cargo game?",
+            "ExternalId": "",
+            "Position": {
+              "x": 775.0,
+              "y": 1225.0
+            },
+            "ZIndex": 3.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 1761018864,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000200001ED0",
+                "Owner": "0x100000200001ECF"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000200001ED1",
+                "Owner": "0x100000200001ECF",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000200001ED7",
+                    "Target": "0x100000200001ED6"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000200001EB4",
+                    "Target": "0x100000200001EB3"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000200001EBB",
+                    "Target": "0x100000200001EBA"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "Dialogue_Fragment_Default_Button_Text": {
+              "Default_Button_Text": ""
+            }
+          }
+        },
+        {
+          "Type": "Dialogue_Fragment",
+          "Properties": {
+            "TechnicalName": "DFr_82928098",
+            "Id": "0x100000200001ED6",
+            "Parent": "0x100000200001E74",
+            "MenuText": "Yes",
+            "StageDirections": "",
+            "Speaker": "0x10000020000186A",
+            "Color": {
+              "r": 0.08627451,
+              "g": 0.2627451,
+              "b": 0.654902
+            },
+            "Text": "Yes, I am ready to play.",
+            "ExternalId": "",
+            "Position": {
+              "x": 1225.0,
+              "y": 1075.0
+            },
+            "ZIndex": 17.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 2190639256,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000200001ED7",
+                "Owner": "0x100000200001ED6"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000200001ED8",
+                "Owner": "0x100000200001ED6",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000200001E78",
+                    "Target": "0x100000200001E74"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "Dialogue_Fragment_Default_Button_Text": {
+              "Default_Button_Text": ""
             }
           }
         },
@@ -3094,66 +3583,6 @@
           },
           "Template": {
             "Dialogue_Fragment_Default_Button_Text": {
-              "Default_Button_Text": "Go speak to Captain"
-            }
-          }
-        },
-        {
-          "Type": "Dialogue_Fragment",
-          "Properties": {
-            "TechnicalName": "DFr_5C474E3C",
-            "Id": "0x100000200001FB0",
-            "Parent": "0x100000200001FA2",
-            "MenuText": "Spoke to Crew, Time to Play Game",
-            "StageDirections": "",
-            "Speaker": "0x10000020000177C",
-            "Color": {
-              "r": 0.08627451,
-              "g": 0.2627451,
-              "b": 0.654902
-            },
-            "Text": "I see you've now spoken with all of the crew.  Go over to the Cargo Game Station and get going moving cargo.",
-            "ExternalId": "",
-            "Position": {
-              "x": 600.60000000000014,
-              "y": 819.0
-            },
-            "ZIndex": 11.0,
-            "Size": {
-              "w": 225.0,
-              "h": 200.0
-            },
-            "ShortId": 1548176956,
-            "InputPins": [
-              {
-                "Text": "Cargo_Game.spokeToCaptainOnce == true &&\nCargo_Game.spokeToGeneOnce == true &&\nCargo_Game.spokeToJaneOnce == true &&\nCargo_Game.spokeToJoeOnce == true && \nCargo_Game.playedCargoGame == false",
-                "Id": "0x100000200001FB1",
-                "Owner": "0x100000200001FB0"
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "Cargo_Game.spokeToCaptainTwice = true",
-                "Id": "0x100000200001FB2",
-                "Owner": "0x100000200001FB0",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x100000200001FA6",
-                    "Target": "0x100000200001FA2"
-                  }
-                ]
-              }
-            ]
-          },
-          "Template": {
-            "Dialogue_Fragment_Default_Button_Text": {
               "Default_Button_Text": ""
             }
           }
@@ -3161,41 +3590,41 @@
         {
           "Type": "Dialogue_Fragment",
           "Properties": {
-            "TechnicalName": "DFr_B1C0523A",
-            "Id": "0x100000200001FB7",
-            "Parent": "0x100000200001FA2",
-            "MenuText": "Have played cargo game.",
+            "TechnicalName": "DFr_2C8AB953",
+            "Id": "0x100000200001FDE",
+            "Parent": "0x100000200001E74",
+            "MenuText": "Sigh",
             "StageDirections": "",
-            "Speaker": "0x10000020000177C",
+            "Speaker": "0x10000020000186A",
             "Color": {
               "r": 0.08627451,
               "g": 0.2627451,
               "b": 0.654902
             },
-            "Text": "I see you've played the Cargo Game.  Good job!  Have fun on your further adventures!",
+            "Text": "*Sigh*  Bit of a jerk, aren't you?",
             "ExternalId": "",
             "Position": {
-              "x": 600.60000000000014,
-              "y": 1044.0
+              "x": 800.0,
+              "y": 800.0
             },
-            "ZIndex": 10.0,
+            "ZIndex": 29.0,
             "Size": {
               "w": 225.0,
               "h": 200.0
             },
-            "ShortId": 2982171194,
+            "ShortId": 747288915,
             "InputPins": [
               {
-                "Text": "Cargo_Game.playedCargoGame == true",
-                "Id": "0x100000200001FB8",
-                "Owner": "0x100000200001FB7"
+                "Text": "",
+                "Id": "0x100000200001FE1",
+                "Owner": "0x100000200001FDE"
               }
             ],
             "OutputPins": [
               {
                 "Text": "",
-                "Id": "0x100000200001FB9",
-                "Owner": "0x100000200001FB7",
+                "Id": "0x100000200001FE2",
+                "Owner": "0x100000200001FDE",
                 "Connections": [
                   {
                     "Color": {
@@ -3205,8 +3634,68 @@
                       "b": 0.8
                     },
                     "Label": "",
-                    "TargetPin": "0x100000200001FA6",
-                    "Target": "0x100000200001FA2"
+                    "TargetPin": "0x100000200002036",
+                    "Target": "0x100000200001E74"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "Dialogue_Fragment_Default_Button_Text": {
+              "Default_Button_Text": "Leave in a huff"
+            }
+          }
+        },
+        {
+          "Type": "Dialogue_Fragment",
+          "Properties": {
+            "TechnicalName": "DFr_980B6A12",
+            "Id": "0x100000200001EF1",
+            "Parent": "0x100000200001EE8",
+            "MenuText": "Spoke to everone.",
+            "StageDirections": "",
+            "Speaker": "0x1000002000018E7",
+            "Color": {
+              "r": 0.08627451,
+              "g": 0.2627451,
+              "b": 0.654902
+            },
+            "Text": "Good on ya, you spoke to everyone.  The captain is waiting to give you your new assignment.",
+            "ExternalId": "",
+            "Position": {
+              "x": 660.0,
+              "y": 762.0
+            },
+            "ZIndex": 8.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 2550884882,
+            "InputPins": [
+              {
+                "Text": "Cargo_Game.spokeToCaptainOnce == true &&\nCargo_Game.spokeToJoeOnce == true &&\nCargo_Game.spokeToGeneOnce == true &&\nCargo_Game.spokeToCaptainTwice== false",
+                "Id": "0x100000200001EF2",
+                "Owner": "0x100000200001EF1"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "Cargo_Game.spokeToJaneOnce = true",
+                "Id": "0x100000200001EF3",
+                "Owner": "0x100000200001EF1",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000200001EEC",
+                    "Target": "0x100000200001EE8"
                   }
                 ]
               }
@@ -3221,41 +3710,41 @@
         {
           "Type": "Dialogue_Fragment",
           "Properties": {
-            "TechnicalName": "Captin_Jones_Dialogue_Frag_First_Talk",
-            "Id": "0x100000200001FBE",
-            "Parent": "0x100000200001FA2",
-            "MenuText": "First Talk.",
+            "TechnicalName": "DFr_D0587BD5",
+            "Id": "0x100000200001EFD",
+            "Parent": "0x100000200001EE8",
+            "MenuText": "First talk.",
             "StageDirections": "",
-            "Speaker": "0x10000020000177C",
+            "Speaker": "0x1000002000018E7",
             "Color": {
               "r": 0.08627451,
               "g": 0.2627451,
               "b": 0.654902
             },
-            "Text": "Hello, [Player_Character_Entity_Tech_Name.Basic_Character_Attributes.NPC_Feature_Name]!  Welcome aboard.  Before we go further, please speak with the rest of the crew.",
+            "Text": "I will not have a conversation with you until you talk to our captain first, [Player_Character_Entity_Tech_Name.Basic_Character_Attributes.NPC_Feature_Name].",
             "ExternalId": "",
             "Position": {
-              "x": 625.60000000000014,
-              "y": 369.0
+              "x": 635.0,
+              "y": 237.0
             },
-            "ZIndex": 11.0,
+            "ZIndex": 2.0,
             "Size": {
               "w": 225.0,
               "h": 200.0
             },
-            "ShortId": 1125509814,
+            "ShortId": 3495459797,
             "InputPins": [
               {
                 "Text": "Cargo_Game.spokeToCaptainOnce == false",
-                "Id": "0x100000200001FBF",
-                "Owner": "0x100000200001FBE"
+                "Id": "0x100000200001EFE",
+                "Owner": "0x100000200001EFD"
               }
             ],
             "OutputPins": [
               {
-                "Text": "Cargo_Game.spokeToCaptainOnce = true;",
-                "Id": "0x100000200001FC0",
-                "Owner": "0x100000200001FBE",
+                "Text": "",
+                "Id": "0x100000200001EFF",
+                "Owner": "0x100000200001EFD",
                 "Connections": [
                   {
                     "Color": {
@@ -3265,8 +3754,8 @@
                       "b": 0.8
                     },
                     "Label": "",
-                    "TargetPin": "0x100000200001FA6",
-                    "Target": "0x100000200001FA2"
+                    "TargetPin": "0x100000200001EEC",
+                    "Target": "0x100000200001EE8"
                   }
                 ]
               }
@@ -3281,41 +3770,41 @@
         {
           "Type": "Dialogue_Fragment",
           "Properties": {
-            "TechnicalName": "DFr_65352598",
-            "Id": "0x100000200001FC5",
-            "Parent": "0x100000200001FA2",
-            "MenuText": "Haven't finished speaking to crew.",
+            "TechnicalName": "DFr_3EACCCA4",
+            "Id": "0x100000200001F04",
+            "Parent": "0x100000200001EE8",
+            "MenuText": "Second talk.",
             "StageDirections": "",
-            "Speaker": "0x10000020000177C",
+            "Speaker": "0x1000002000018E7",
             "Color": {
               "r": 0.08627451,
               "g": 0.2627451,
               "b": 0.654902
             },
-            "Text": "You haven't finished speaking with the crew yet.",
+            "Text": "You have spoken with the Captain.  Good.  Now speak with the rest before we rap ourselves.",
             "ExternalId": "",
             "Position": {
-              "x": 600.60000000000014,
-              "y": 594.0
+              "x": 660.0,
+              "y": 512.0
             },
-            "ZIndex": 10.0,
+            "ZIndex": 4.0,
             "Size": {
               "w": 225.0,
               "h": 200.0
             },
-            "ShortId": 1697981848,
+            "ShortId": 1051511972,
             "InputPins": [
               {
-                "Text": "Cargo_Game.spokeToCaptainOnce == true && \n(Cargo_Game.spokeToGeneOnce == false ||\n Cargo_Game.spokeToJaneOnce == false ||\n Cargo_Game.spokeToJoeOnce == false)",
-                "Id": "0x100000200001FC6",
-                "Owner": "0x100000200001FC5"
+                "Text": "Cargo_Game.spokeToCaptainOnce == true &&\n(Cargo_Game.spokeToGeneOnce == false ||\nCargo_Game.spokeToJoeOnce == false) &&\nCargo_Game.playedCargoGame == false",
+                "Id": "0x100000200001F05",
+                "Owner": "0x100000200001F04"
               }
             ],
             "OutputPins": [
               {
-                "Text": "",
-                "Id": "0x100000200001FC7",
-                "Owner": "0x100000200001FC5",
+                "Text": "Cargo_Game.spokeToJaneOnce = true;",
+                "Id": "0x100000200001F06",
+                "Owner": "0x100000200001F04",
                 "Connections": [
                   {
                     "Color": {
@@ -3325,8 +3814,428 @@
                       "b": 0.8
                     },
                     "Label": "",
-                    "TargetPin": "0x100000200001FA6",
-                    "Target": "0x100000200001FA2"
+                    "TargetPin": "0x100000200001EEC",
+                    "Target": "0x100000200001EE8"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "Dialogue_Fragment_Default_Button_Text": {
+              "Default_Button_Text": ""
+            }
+          }
+        },
+        {
+          "Type": "Dialogue_Fragment",
+          "Properties": {
+            "TechnicalName": "DFr_197F13D8",
+            "Id": "0x100000200001F0B",
+            "Parent": "0x100000200001EE8",
+            "MenuText": "Played cargo game.",
+            "StageDirections": "",
+            "Speaker": "0x1000002000018E7",
+            "Color": {
+              "r": 0.08627451,
+              "g": 0.2627451,
+              "b": 0.654902
+            },
+            "Text": "Moving cargo is great, but you have much more in store for you so keep playing.",
+            "ExternalId": "",
+            "Position": {
+              "x": 635.0,
+              "y": 1362.0
+            },
+            "ZIndex": 11.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 427758552,
+            "InputPins": [
+              {
+                "Text": "Cargo_Game.playedCargoGame == true",
+                "Id": "0x100000200001F0C",
+                "Owner": "0x100000200001F0B"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000200001F0D",
+                "Owner": "0x100000200001F0B",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000200001EEC",
+                    "Target": "0x100000200001EE8"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "Dialogue_Fragment_Default_Button_Text": {
+              "Default_Button_Text": ""
+            }
+          }
+        },
+        {
+          "Type": "Dialogue_Fragment",
+          "Properties": {
+            "TechnicalName": "DFr_AA97795A",
+            "Id": "0x100000200001F12",
+            "Parent": "0x100000200001EE8",
+            "MenuText": "Ready to play.",
+            "StageDirections": "",
+            "Speaker": "0x1000002000018E7",
+            "Color": {
+              "r": 0.08627451,
+              "g": 0.2627451,
+              "b": 0.654902
+            },
+            "Text": "I hope you enjoy the Cargo game, now get to it.",
+            "ExternalId": "",
+            "Position": {
+              "x": 660.0,
+              "y": 1012.0
+            },
+            "ZIndex": 13.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 2862053722,
+            "InputPins": [
+              {
+                "Text": "Cargo_Game.spokeToCaptainTwice == true &&\nCargo_Game.playedCargoGame == false",
+                "Id": "0x100000200001F13",
+                "Owner": "0x100000200001F12"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000200001F14",
+                "Owner": "0x100000200001F12",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000200001EEC",
+                    "Target": "0x100000200001EE8"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "Dialogue_Fragment_Default_Button_Text": {
+              "Default_Button_Text": ""
+            }
+          }
+        },
+        {
+          "Type": "Dialogue_Fragment",
+          "Properties": {
+            "TechnicalName": "DFr_4A6660AC",
+            "Id": "0x100000200001F38",
+            "Parent": "0x100000200001F2A",
+            "MenuText": "Ready to play.",
+            "StageDirections": "",
+            "Speaker": "0x1000002000018E3",
+            "Color": {
+              "r": 0.08627451,
+              "g": 0.2627451,
+              "b": 0.654902
+            },
+            "Text": "Time to get going on that Cargo game.",
+            "ExternalId": "",
+            "Position": {
+              "x": 693.60000000000014,
+              "y": 1027.0
+            },
+            "ZIndex": 14.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 1248223404,
+            "InputPins": [
+              {
+                "Text": "Cargo_Game.spokeToCaptainTwice == true &&\nCargo_Game.playedCargoGame == false",
+                "Id": "0x100000200001F39",
+                "Owner": "0x100000200001F38"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000200001F3A",
+                "Owner": "0x100000200001F38",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000200001F2E",
+                    "Target": "0x100000200001F2A"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "Dialogue_Fragment_Default_Button_Text": {
+              "Default_Button_Text": ""
+            }
+          }
+        },
+        {
+          "Type": "Dialogue_Fragment",
+          "Properties": {
+            "TechnicalName": "DFr_52AA4D90",
+            "Id": "0x100000200001F3F",
+            "Parent": "0x100000200001F2A",
+            "MenuText": "First talk.",
+            "StageDirections": "",
+            "Speaker": "0x1000002000018E3",
+            "Color": {
+              "r": 0.08627451,
+              "g": 0.2627451,
+              "b": 0.654902
+            },
+            "Text": "Please speak to the Captain first.",
+            "ExternalId": "",
+            "Position": {
+              "x": 643.60000000000014,
+              "y": 252.0
+            },
+            "ZIndex": 2.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 1386892688,
+            "InputPins": [
+              {
+                "Text": "Cargo_Game.spokeToCaptainOnce == false",
+                "Id": "0x100000200001F40",
+                "Owner": "0x100000200001F3F"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000200001F41",
+                "Owner": "0x100000200001F3F",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000200001F2E",
+                    "Target": "0x100000200001F2A"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "Dialogue_Fragment_Default_Button_Text": {
+              "Default_Button_Text": ""
+            }
+          }
+        },
+        {
+          "Type": "Dialogue_Fragment",
+          "Properties": {
+            "TechnicalName": "DFr_6B8651C0",
+            "Id": "0x100000200001F46",
+            "Parent": "0x100000200001F2A",
+            "MenuText": "Second Talk",
+            "StageDirections": "",
+            "Speaker": "0x1000002000018E3",
+            "Color": {
+              "r": 0.08627451,
+              "g": 0.2627451,
+              "b": 0.654902
+            },
+            "Text": "So, you spoke with El-Capitano, but not the rest of the crew yet.  Get on it.",
+            "ExternalId": "",
+            "Position": {
+              "x": 668.60000000000014,
+              "y": 527.0
+            },
+            "ZIndex": 4.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 1803964864,
+            "InputPins": [
+              {
+                "Text": "Cargo_Game.spokeToCaptainOnce == true &&\n(Cargo_Game.spokeToGeneOnce == false ||\nCargo_Game.spokeToJaneOnce == false) &&\nCargo_Game.playedCargoGame == false",
+                "Id": "0x100000200001F47",
+                "Owner": "0x100000200001F46"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "Cargo_Game.spokeToJoeOnce = true",
+                "Id": "0x100000200001F48",
+                "Owner": "0x100000200001F46",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000200001F2E",
+                    "Target": "0x100000200001F2A"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "Dialogue_Fragment_Default_Button_Text": {
+              "Default_Button_Text": ""
+            }
+          }
+        },
+        {
+          "Type": "Dialogue_Fragment",
+          "Properties": {
+            "TechnicalName": "DFr_BF9DA596",
+            "Id": "0x100000200001F4D",
+            "Parent": "0x100000200001F2A",
+            "MenuText": "Played cargo game.",
+            "StageDirections": "",
+            "Speaker": "0x1000002000018E3",
+            "Color": {
+              "r": 0.08627451,
+              "g": 0.2627451,
+              "b": 0.654902
+            },
+            "Text": "I see you played the cargo game.  Can't wait to see ya try the other ones.",
+            "ExternalId": "",
+            "Position": {
+              "x": 718.60000000000014,
+              "y": 1277.0
+            },
+            "ZIndex": 11.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 3214779798,
+            "InputPins": [
+              {
+                "Text": "Cargo_Game.playedCargoGame == true",
+                "Id": "0x100000200001F4E",
+                "Owner": "0x100000200001F4D"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000200001F4F",
+                "Owner": "0x100000200001F4D",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000200001F2E",
+                    "Target": "0x100000200001F2A"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "Dialogue_Fragment_Default_Button_Text": {
+              "Default_Button_Text": ""
+            }
+          }
+        },
+        {
+          "Type": "Dialogue_Fragment",
+          "Properties": {
+            "TechnicalName": "DFr_930350E9",
+            "Id": "0x100000200001F54",
+            "Parent": "0x100000200001F2A",
+            "MenuText": "Spoke to everyone.",
+            "StageDirections": "",
+            "Speaker": "0x1000002000018E3",
+            "Color": {
+              "r": 0.08627451,
+              "g": 0.2627451,
+              "b": 0.654902
+            },
+            "Text": "Now that you've spoken to everyone, speak with the Captain again to get your orders.",
+            "ExternalId": "",
+            "Position": {
+              "x": 693.60000000000014,
+              "y": 777.0
+            },
+            "ZIndex": 8.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 2466468073,
+            "InputPins": [
+              {
+                "Text": "Cargo_Game.spokeToCaptainOnce == true &&\nCargo_Game.spokeToGeneOnce == true &&\nCargo_Game.spokeToGeneOnce == true &&\nCargo_Game.spokeToCaptainTwice== false",
+                "Id": "0x100000200001F55",
+                "Owner": "0x100000200001F54"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "Cargo_Game.spokeToJoeOnce = true",
+                "Id": "0x100000200001F56",
+                "Owner": "0x100000200001F54",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000200001F2E",
+                    "Target": "0x100000200001F2A"
                   }
                 ]
               }
@@ -3641,221 +4550,101 @@
         {
           "Type": "Dialogue_Fragment",
           "Properties": {
-            "TechnicalName": "DFr_4A6660AC",
-            "Id": "0x100000200001F38",
-            "Parent": "0x100000200001F2A",
-            "MenuText": "Ready to play.",
+            "TechnicalName": "DFr_5C474E3C",
+            "Id": "0x100000200001FB0",
+            "Parent": "0x100000200001FA2",
+            "MenuText": "Spoke to Crew, Time to Play Game",
             "StageDirections": "",
-            "Speaker": "0x1000002000018E3",
+            "Speaker": "0x10000020000177C",
             "Color": {
               "r": 0.08627451,
               "g": 0.2627451,
               "b": 0.654902
             },
-            "Text": "Time to get going on that Cargo game.",
+            "Text": "I see you've now spoken with all of the crew.  Go over to the Cargo Game Station and get going moving cargo.",
             "ExternalId": "",
             "Position": {
-              "x": 693.60000000000014,
-              "y": 1027.0
-            },
-            "ZIndex": 14.0,
-            "Size": {
-              "w": 225.0,
-              "h": 200.0
-            },
-            "ShortId": 1248223404,
-            "InputPins": [
-              {
-                "Text": "Cargo_Game.spokeToCaptainTwice == true &&\nCargo_Game.playedCargoGame == false",
-                "Id": "0x100000200001F39",
-                "Owner": "0x100000200001F38"
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "",
-                "Id": "0x100000200001F3A",
-                "Owner": "0x100000200001F38",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x100000200001F2E",
-                    "Target": "0x100000200001F2A"
-                  }
-                ]
-              }
-            ]
-          },
-          "Template": {
-            "Dialogue_Fragment_Default_Button_Text": {
-              "Default_Button_Text": ""
-            }
-          }
-        },
-        {
-          "Type": "Dialogue_Fragment",
-          "Properties": {
-            "TechnicalName": "DFr_52AA4D90",
-            "Id": "0x100000200001F3F",
-            "Parent": "0x100000200001F2A",
-            "MenuText": "First talk.",
-            "StageDirections": "",
-            "Speaker": "0x1000002000018E3",
-            "Color": {
-              "r": 0.08627451,
-              "g": 0.2627451,
-              "b": 0.654902
-            },
-            "Text": "Yo, what's up?  Talk to El-Capitano first.",
-            "ExternalId": "",
-            "Position": {
-              "x": 643.60000000000014,
-              "y": 252.0
-            },
-            "ZIndex": 2.0,
-            "Size": {
-              "w": 225.0,
-              "h": 200.0
-            },
-            "ShortId": 1386892688,
-            "InputPins": [
-              {
-                "Text": "Cargo_Game.spokeToCaptainOnce == false",
-                "Id": "0x100000200001F40",
-                "Owner": "0x100000200001F3F"
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "",
-                "Id": "0x100000200001F41",
-                "Owner": "0x100000200001F3F",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x100000200001F2E",
-                    "Target": "0x100000200001F2A"
-                  }
-                ]
-              }
-            ]
-          },
-          "Template": {
-            "Dialogue_Fragment_Default_Button_Text": {
-              "Default_Button_Text": ""
-            }
-          }
-        },
-        {
-          "Type": "Dialogue_Fragment",
-          "Properties": {
-            "TechnicalName": "DFr_6B8651C0",
-            "Id": "0x100000200001F46",
-            "Parent": "0x100000200001F2A",
-            "MenuText": "Second Talk",
-            "StageDirections": "",
-            "Speaker": "0x1000002000018E3",
-            "Color": {
-              "r": 0.08627451,
-              "g": 0.2627451,
-              "b": 0.654902
-            },
-            "Text": "So, you spoke with El-Capitano, but not the rest of the crew yet.  Get on it.",
-            "ExternalId": "",
-            "Position": {
-              "x": 668.60000000000014,
-              "y": 527.0
-            },
-            "ZIndex": 4.0,
-            "Size": {
-              "w": 225.0,
-              "h": 200.0
-            },
-            "ShortId": 1803964864,
-            "InputPins": [
-              {
-                "Text": "Cargo_Game.spokeToCaptainOnce == true &&\n(Cargo_Game.spokeToGeneOnce == false ||\nCargo_Game.spokeToJaneOnce == false) &&\nCargo_Game.playedCargoGame == false",
-                "Id": "0x100000200001F47",
-                "Owner": "0x100000200001F46"
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "Cargo_Game.spokeToJoeOnce = true",
-                "Id": "0x100000200001F48",
-                "Owner": "0x100000200001F46",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x100000200001F2E",
-                    "Target": "0x100000200001F2A"
-                  }
-                ]
-              }
-            ]
-          },
-          "Template": {
-            "Dialogue_Fragment_Default_Button_Text": {
-              "Default_Button_Text": ""
-            }
-          }
-        },
-        {
-          "Type": "Dialogue_Fragment",
-          "Properties": {
-            "TechnicalName": "DFr_BF9DA596",
-            "Id": "0x100000200001F4D",
-            "Parent": "0x100000200001F2A",
-            "MenuText": "Played cargo game.",
-            "StageDirections": "",
-            "Speaker": "0x1000002000018E3",
-            "Color": {
-              "r": 0.08627451,
-              "g": 0.2627451,
-              "b": 0.654902
-            },
-            "Text": "I see you played the cargo game.  Can't wait to see ya try the other ones.",
-            "ExternalId": "",
-            "Position": {
-              "x": 718.60000000000014,
-              "y": 1277.0
+              "x": 600.60000000000014,
+              "y": 819.0
             },
             "ZIndex": 11.0,
             "Size": {
               "w": 225.0,
               "h": 200.0
             },
-            "ShortId": 3214779798,
+            "ShortId": 1548176956,
+            "InputPins": [
+              {
+                "Text": "Cargo_Game.spokeToCaptainOnce == true &&\nCargo_Game.spokeToGeneOnce == true &&\nCargo_Game.spokeToJaneOnce == true &&\nCargo_Game.spokeToJoeOnce == true && \nCargo_Game.playedCargoGame == false",
+                "Id": "0x100000200001FB1",
+                "Owner": "0x100000200001FB0"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "Cargo_Game.spokeToCaptainTwice = true",
+                "Id": "0x100000200001FB2",
+                "Owner": "0x100000200001FB0",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000200001FA6",
+                    "Target": "0x100000200001FA2"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "Dialogue_Fragment_Default_Button_Text": {
+              "Default_Button_Text": ""
+            }
+          }
+        },
+        {
+          "Type": "Dialogue_Fragment",
+          "Properties": {
+            "TechnicalName": "DFr_B1C0523A",
+            "Id": "0x100000200001FB7",
+            "Parent": "0x100000200001FA2",
+            "MenuText": "Have played cargo game.",
+            "StageDirections": "",
+            "Speaker": "0x10000020000177C",
+            "Color": {
+              "r": 0.08627451,
+              "g": 0.2627451,
+              "b": 0.654902
+            },
+            "Text": "I see you've played the Cargo Game.  Good job!  Have fun on your further adventures!",
+            "ExternalId": "",
+            "Position": {
+              "x": 600.60000000000014,
+              "y": 1044.0
+            },
+            "ZIndex": 10.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 2982171194,
             "InputPins": [
               {
                 "Text": "Cargo_Game.playedCargoGame == true",
-                "Id": "0x100000200001F4E",
-                "Owner": "0x100000200001F4D"
+                "Id": "0x100000200001FB8",
+                "Owner": "0x100000200001FB7"
               }
             ],
             "OutputPins": [
               {
                 "Text": "",
-                "Id": "0x100000200001F4F",
-                "Owner": "0x100000200001F4D",
+                "Id": "0x100000200001FB9",
+                "Owner": "0x100000200001FB7",
                 "Connections": [
                   {
                     "Color": {
@@ -3865,8 +4654,8 @@
                       "b": 0.8
                     },
                     "Label": "",
-                    "TargetPin": "0x100000200001F2E",
-                    "Target": "0x100000200001F2A"
+                    "TargetPin": "0x100000200001FA6",
+                    "Target": "0x100000200001FA2"
                   }
                 ]
               }
@@ -3881,890 +4670,41 @@
         {
           "Type": "Dialogue_Fragment",
           "Properties": {
-            "TechnicalName": "DFr_930350E9",
-            "Id": "0x100000200001F54",
-            "Parent": "0x100000200001F2A",
-            "MenuText": "Spoke to everyone.",
-            "StageDirections": "",
-            "Speaker": "0x1000002000018E3",
-            "Color": {
-              "r": 0.08627451,
-              "g": 0.2627451,
-              "b": 0.654902
-            },
-            "Text": " Now that you've spoken to everyone, speak with the Captain again to get your orders.",
-            "ExternalId": "",
-            "Position": {
-              "x": 693.60000000000014,
-              "y": 777.0
-            },
-            "ZIndex": 8.0,
-            "Size": {
-              "w": 225.0,
-              "h": 200.0
-            },
-            "ShortId": 2466468073,
-            "InputPins": [
-              {
-                "Text": "Cargo_Game.spokeToCaptainOnce == true &&\nCargo_Game.spokeToGeneOnce == true &&\nCargo_Game.spokeToGeneOnce == true &&\nCargo_Game.spokeToCaptainTwice== false",
-                "Id": "0x100000200001F55",
-                "Owner": "0x100000200001F54"
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "Cargo_Game.spokeToJoeOnce = true",
-                "Id": "0x100000200001F56",
-                "Owner": "0x100000200001F54",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x100000200001F2E",
-                    "Target": "0x100000200001F2A"
-                  }
-                ]
-              }
-            ]
-          },
-          "Template": {
-            "Dialogue_Fragment_Default_Button_Text": {
-              "Default_Button_Text": ""
-            }
-          }
-        },
-        {
-          "Type": "Dialogue_Fragment",
-          "Properties": {
-            "TechnicalName": "DFr_980B6A12",
-            "Id": "0x100000200001EF1",
-            "Parent": "0x100000200001EE8",
-            "MenuText": "Spoke to everone.",
-            "StageDirections": "",
-            "Speaker": "0x1000002000018E7",
-            "Color": {
-              "r": 0.08627451,
-              "g": 0.2627451,
-              "b": 0.654902
-            },
-            "Text": "Good on ya, you spoke to everyone.  The captain is waiting to give you your new assignment.",
-            "ExternalId": "",
-            "Position": {
-              "x": 660.0,
-              "y": 762.0
-            },
-            "ZIndex": 8.0,
-            "Size": {
-              "w": 225.0,
-              "h": 200.0
-            },
-            "ShortId": 2550884882,
-            "InputPins": [
-              {
-                "Text": "Cargo_Game.spokeToCaptainOnce == true &&\nCargo_Game.spokeToJoeOnce == true &&\nCargo_Game.spokeToGeneOnce == true &&\nCargo_Game.spokeToCaptainTwice== false",
-                "Id": "0x100000200001EF2",
-                "Owner": "0x100000200001EF1"
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "Cargo_Game.spokeToJaneOnce = true",
-                "Id": "0x100000200001EF3",
-                "Owner": "0x100000200001EF1",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x100000200001EEC",
-                    "Target": "0x100000200001EE8"
-                  }
-                ]
-              }
-            ]
-          },
-          "Template": {
-            "Dialogue_Fragment_Default_Button_Text": {
-              "Default_Button_Text": ""
-            }
-          }
-        },
-        {
-          "Type": "Dialogue_Fragment",
-          "Properties": {
-            "TechnicalName": "DFr_D0587BD5",
-            "Id": "0x100000200001EFD",
-            "Parent": "0x100000200001EE8",
-            "MenuText": "First talk.",
-            "StageDirections": "",
-            "Speaker": "0x1000002000018E7",
-            "Color": {
-              "r": 0.08627451,
-              "g": 0.2627451,
-              "b": 0.654902
-            },
-            "Text": "I will not have a conversation with you until you talk to our captain first, [Player_Character_Entity_Tech_Name.Basic_Character_Attributes.NPC_Feature_Name].",
-            "ExternalId": "",
-            "Position": {
-              "x": 635.0,
-              "y": 237.0
-            },
-            "ZIndex": 2.0,
-            "Size": {
-              "w": 225.0,
-              "h": 200.0
-            },
-            "ShortId": 3495459797,
-            "InputPins": [
-              {
-                "Text": "Cargo_Game.spokeToCaptainOnce == false",
-                "Id": "0x100000200001EFE",
-                "Owner": "0x100000200001EFD"
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "",
-                "Id": "0x100000200001EFF",
-                "Owner": "0x100000200001EFD",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x100000200001EEC",
-                    "Target": "0x100000200001EE8"
-                  }
-                ]
-              }
-            ]
-          },
-          "Template": {
-            "Dialogue_Fragment_Default_Button_Text": {
-              "Default_Button_Text": ""
-            }
-          }
-        },
-        {
-          "Type": "Dialogue_Fragment",
-          "Properties": {
-            "TechnicalName": "DFr_3EACCCA4",
-            "Id": "0x100000200001F04",
-            "Parent": "0x100000200001EE8",
-            "MenuText": "Second talk.",
-            "StageDirections": "",
-            "Speaker": "0x1000002000018E7",
-            "Color": {
-              "r": 0.08627451,
-              "g": 0.2627451,
-              "b": 0.654902
-            },
-            "Text": "You have spoken with the Captain.  Good.  Now speak with the rest before we rap ourselves.",
-            "ExternalId": "",
-            "Position": {
-              "x": 660.0,
-              "y": 512.0
-            },
-            "ZIndex": 4.0,
-            "Size": {
-              "w": 225.0,
-              "h": 200.0
-            },
-            "ShortId": 1051511972,
-            "InputPins": [
-              {
-                "Text": "Cargo_Game.spokeToCaptainOnce == true &&\n(Cargo_Game.spokeToGeneOnce == false ||\nCargo_Game.spokeToJoeOnce == false) &&\nCargo_Game.playedCargoGame == false",
-                "Id": "0x100000200001F05",
-                "Owner": "0x100000200001F04"
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "Cargo_Game.spokeToJaneOnce = true;",
-                "Id": "0x100000200001F06",
-                "Owner": "0x100000200001F04",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x100000200001EEC",
-                    "Target": "0x100000200001EE8"
-                  }
-                ]
-              }
-            ]
-          },
-          "Template": {
-            "Dialogue_Fragment_Default_Button_Text": {
-              "Default_Button_Text": ""
-            }
-          }
-        },
-        {
-          "Type": "Dialogue_Fragment",
-          "Properties": {
-            "TechnicalName": "DFr_197F13D8",
-            "Id": "0x100000200001F0B",
-            "Parent": "0x100000200001EE8",
-            "MenuText": "Played cargo game.",
-            "StageDirections": "",
-            "Speaker": "0x1000002000018E7",
-            "Color": {
-              "r": 0.08627451,
-              "g": 0.2627451,
-              "b": 0.654902
-            },
-            "Text": "Moving cargo is great, but you have much more in store for you so keep playing.",
-            "ExternalId": "",
-            "Position": {
-              "x": 635.0,
-              "y": 1362.0
-            },
-            "ZIndex": 11.0,
-            "Size": {
-              "w": 225.0,
-              "h": 200.0
-            },
-            "ShortId": 427758552,
-            "InputPins": [
-              {
-                "Text": "Cargo_Game.playedCargoGame == true",
-                "Id": "0x100000200001F0C",
-                "Owner": "0x100000200001F0B"
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "",
-                "Id": "0x100000200001F0D",
-                "Owner": "0x100000200001F0B",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x100000200001EEC",
-                    "Target": "0x100000200001EE8"
-                  }
-                ]
-              }
-            ]
-          },
-          "Template": {
-            "Dialogue_Fragment_Default_Button_Text": {
-              "Default_Button_Text": ""
-            }
-          }
-        },
-        {
-          "Type": "Dialogue_Fragment",
-          "Properties": {
-            "TechnicalName": "DFr_AA97795A",
-            "Id": "0x100000200001F12",
-            "Parent": "0x100000200001EE8",
-            "MenuText": "Ready to play.",
-            "StageDirections": "",
-            "Speaker": "0x1000002000018E7",
-            "Color": {
-              "r": 0.08627451,
-              "g": 0.2627451,
-              "b": 0.654902
-            },
-            "Text": "I hope you enjoy the Cargo game, now get to it.",
-            "ExternalId": "",
-            "Position": {
-              "x": 660.0,
-              "y": 1012.0
-            },
-            "ZIndex": 13.0,
-            "Size": {
-              "w": 225.0,
-              "h": 200.0
-            },
-            "ShortId": 2862053722,
-            "InputPins": [
-              {
-                "Text": "Cargo_Game.spokeToCaptainTwice == true &&\nCargo_Game.playedCargoGame == false",
-                "Id": "0x100000200001F13",
-                "Owner": "0x100000200001F12"
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "",
-                "Id": "0x100000200001F14",
-                "Owner": "0x100000200001F12",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x100000200001EEC",
-                    "Target": "0x100000200001EE8"
-                  }
-                ]
-              }
-            ]
-          },
-          "Template": {
-            "Dialogue_Fragment_Default_Button_Text": {
-              "Default_Button_Text": ""
-            }
-          }
-        },
-        {
-          "Type": "Dialogue_Fragment",
-          "Properties": {
-            "TechnicalName": "DFr_82928098",
-            "Id": "0x100000200001ED6",
-            "Parent": "0x100000200001E74",
-            "MenuText": "Yes",
-            "StageDirections": "",
-            "Speaker": "0x10000020000186A",
-            "Color": {
-              "r": 0.08627451,
-              "g": 0.2627451,
-              "b": 0.654902
-            },
-            "Text": "Yes, I am ready to play.",
-            "ExternalId": "",
-            "Position": {
-              "x": 1225.0,
-              "y": 1075.0
-            },
-            "ZIndex": 17.0,
-            "Size": {
-              "w": 225.0,
-              "h": 200.0
-            },
-            "ShortId": 2190639256,
-            "InputPins": [
-              {
-                "Text": "",
-                "Id": "0x100000200001ED7",
-                "Owner": "0x100000200001ED6"
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "",
-                "Id": "0x100000200001ED8",
-                "Owner": "0x100000200001ED6",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x100000200001E78",
-                    "Target": "0x100000200001E74"
-                  }
-                ]
-              }
-            ]
-          },
-          "Template": {
-            "Dialogue_Fragment_Default_Button_Text": {
-              "Default_Button_Text": ""
-            }
-          }
-        },
-        {
-          "Type": "Dialogue_Fragment",
-          "Properties": {
-            "TechnicalName": "DFr_68F703F0",
-            "Id": "0x100000200001ECF",
-            "Parent": "0x100000200001E74",
-            "MenuText": "Ask to play.",
-            "StageDirections": "",
-            "Speaker": "0x100000200001957",
-            "Color": {
-              "r": 0.08627451,
-              "g": 0.2627451,
-              "b": 0.654902
-            },
-            "Text": "Would you like to play the Cargo game?",
-            "ExternalId": "",
-            "Position": {
-              "x": 775.0,
-              "y": 1225.0
-            },
-            "ZIndex": 3.0,
-            "Size": {
-              "w": 225.0,
-              "h": 200.0
-            },
-            "ShortId": 1761018864,
-            "InputPins": [
-              {
-                "Text": "",
-                "Id": "0x100000200001ED0",
-                "Owner": "0x100000200001ECF"
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "",
-                "Id": "0x100000200001ED1",
-                "Owner": "0x100000200001ECF",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x100000200001ED7",
-                    "Target": "0x100000200001ED6"
-                  },
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x100000200001EB4",
-                    "Target": "0x100000200001EB3"
-                  },
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x100000200001EBB",
-                    "Target": "0x100000200001EBA"
-                  }
-                ]
-              }
-            ]
-          },
-          "Template": {
-            "Dialogue_Fragment_Default_Button_Text": {
-              "Default_Button_Text": ""
-            }
-          }
-        },
-        {
-          "Type": "Dialogue_Fragment",
-          "Properties": {
-            "TechnicalName": "DFr_260FD5A5",
-            "Id": "0x100000200001EC8",
-            "Parent": "0x100000200001E74",
-            "MenuText": "Game done\r\n",
-            "StageDirections": "",
-            "Speaker": "0x100000200001957",
-            "Color": {
-              "r": 0.08627451,
-              "g": 0.2627451,
-              "b": 0.654902
-            },
-            "Text": "We're done.",
-            "ExternalId": "",
-            "Position": {
-              "x": 425.0,
-              "y": 1700.0
-            },
-            "ZIndex": 5.0,
-            "Size": {
-              "w": 225.0,
-              "h": 200.0
-            },
-            "ShortId": 638571941,
-            "InputPins": [
-              {
-                "Text": "Cargo_Game.playedCargoGame == true",
-                "Id": "0x100000200001EC9",
-                "Owner": "0x100000200001EC8"
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "",
-                "Id": "0x100000200001ECA",
-                "Owner": "0x100000200001EC8",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x100000200002036",
-                    "Target": "0x100000200001E74"
-                  }
-                ]
-              }
-            ]
-          },
-          "Template": {
-            "Dialogue_Fragment_Default_Button_Text": {
-              "Default_Button_Text": "Onto other adventures"
-            }
-          }
-        },
-        {
-          "Type": "Dialogue_Fragment",
-          "Properties": {
-            "TechnicalName": "DFr_F58F8888",
-            "Id": "0x100000200001EC1",
-            "Parent": "0x100000200001E74",
-            "MenuText": "Greet Player before asking to play Cargo game.",
-            "StageDirections": "",
-            "Speaker": "0x100000200001957",
-            "Color": {
-              "r": 0.08627451,
-              "g": 0.2627451,
-              "b": 0.654902
-            },
-            "Text": "Greetings, [Player_Character_Entity_Tech_Name.Basic_Character_Attributes.NPC_Feature_Name].  I see you are ready for the Cargo game.",
-            "ExternalId": "",
-            "Position": {
-              "x": 200.0,
-              "y": 1225.0
-            },
-            "ZIndex": 26.0,
-            "Size": {
-              "w": 550.0,
-              "h": 300.0
-            },
-            "ShortId": 4119824520,
-            "InputPins": [
-              {
-                "Text": "Cargo_Game.spokeToCaptainTwice == true && \nCargo_Game.playedCargoGame == false",
-                "Id": "0x100000200001EC2",
-                "Owner": "0x100000200001EC1"
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "",
-                "Id": "0x100000200001EC3",
-                "Owner": "0x100000200001EC1",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x100000200001ED0",
-                    "Target": "0x100000200001ECF"
-                  }
-                ]
-              }
-            ]
-          },
-          "Template": {
-            "Dialogue_Fragment_Default_Button_Text": {
-              "Default_Button_Text": ""
-            }
-          }
-        },
-        {
-          "Type": "Dialogue_Fragment",
-          "Properties": {
-            "TechnicalName": "DFr_6223DFD0",
-            "Id": "0x100000200001EBA",
-            "Parent": "0x100000200001E74",
-            "MenuText": "Wise ass",
-            "StageDirections": "",
-            "Speaker": "0x10000020000186A",
-            "Color": {
-              "r": 0.08627451,
-              "g": 0.2627451,
-              "b": 0.654902
-            },
-            "Text": "Eat me, you bastard machine.  I'll come back later.",
-            "ExternalId": "",
-            "Position": {
-              "x": 1225.0,
-              "y": 1550.0
-            },
-            "ZIndex": 18.0,
-            "Size": {
-              "w": 225.0,
-              "h": 200.0
-            },
-            "ShortId": 1646518224,
-            "InputPins": [
-              {
-                "Text": "",
-                "Id": "0x100000200001EBB",
-                "Owner": "0x100000200001EBA"
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "",
-                "Id": "0x100000200001EBC",
-                "Owner": "0x100000200001EBA",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x100000200002036",
-                    "Target": "0x100000200001E74"
-                  }
-                ]
-              }
-            ]
-          },
-          "Template": {
-            "Dialogue_Fragment_Default_Button_Text": {
-              "Default_Button_Text": ""
-            }
-          }
-        },
-        {
-          "Type": "Dialogue_Fragment",
-          "Properties": {
-            "TechnicalName": "DFr_D0DE3D37",
-            "Id": "0x100000200001EB3",
-            "Parent": "0x100000200001E74",
-            "MenuText": "No",
-            "StageDirections": "",
-            "Speaker": "0x10000020000186A",
-            "Color": {
-              "r": 0.08627451,
-              "g": 0.2627451,
-              "b": 0.654902
-            },
-            "Text": "No, I am not ready to play.",
-            "ExternalId": "",
-            "Position": {
-              "x": 1225.0,
-              "y": 1325.0
-            },
-            "ZIndex": 18.0,
-            "Size": {
-              "w": 225.0,
-              "h": 200.0
-            },
-            "ShortId": 3504225591,
-            "InputPins": [
-              {
-                "Text": "",
-                "Id": "0x100000200001EB4",
-                "Owner": "0x100000200001EB3"
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "",
-                "Id": "0x100000200001EB5",
-                "Owner": "0x100000200001EB3",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x100000200002036",
-                    "Target": "0x100000200001E74"
-                  }
-                ]
-              }
-            ]
-          },
-          "Template": {
-            "Dialogue_Fragment_Default_Button_Text": {
-              "Default_Button_Text": ""
-            }
-          }
-        },
-        {
-          "Type": "Dialogue_Fragment",
-          "Properties": {
-            "TechnicalName": "DFr_A7085A8D",
-            "Id": "0x100000200001EAC",
-            "Parent": "0x100000200001E74",
-            "MenuText": "Third Talk.",
-            "StageDirections": "",
-            "Speaker": "0x100000200001957",
-            "Color": {
-              "r": 0.08627451,
-              "g": 0.2627451,
-              "b": 0.654902
-            },
-            "Text": "Speak to Captain again.",
-            "ExternalId": "",
-            "Position": {
-              "x": 450.0,
-              "y": 875.0
-            },
-            "ZIndex": 15.0,
-            "Size": {
-              "w": 225.0,
-              "h": 200.0
-            },
-            "ShortId": 2802342541,
-            "InputPins": [
-              {
-                "Text": "Cargo_Game.spokeToCaptainOnce == true &&\nCargo_Game.spokeToJoeOnce == true && \nCargo_Game.spokeToJaneOnce == true &&\nCargo_Game.spokeToGeneOnce == true &&\nCargo_Game.spokeToCaptainTwice == false",
-                "Id": "0x100000200001EAD",
-                "Owner": "0x100000200001EAC"
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "",
-                "Id": "0x100000200001EAE",
-                "Owner": "0x100000200001EAC"
-              }
-            ]
-          },
-          "Template": {
-            "Dialogue_Fragment_Default_Button_Text": {
-              "Default_Button_Text": ""
-            }
-          }
-        },
-        {
-          "Type": "Dialogue_Fragment",
-          "Properties": {
-            "TechnicalName": "DFr_09BDE622",
-            "Id": "0x100000200001EA5",
-            "Parent": "0x100000200001E74",
-            "MenuText": "Second Talk.",
-            "StageDirections": "",
-            "Speaker": "0x100000200001957",
-            "Color": {
-              "r": 0.08627451,
-              "g": 0.2627451,
-              "b": 0.654902
-            },
-            "Text": "Speak to rest of crew.",
-            "ExternalId": "",
-            "Position": {
-              "x": 450.0,
-              "y": 650.0
-            },
-            "ZIndex": 17.0,
-            "Size": {
-              "w": 225.0,
-              "h": 200.0
-            },
-            "ShortId": 163440162,
-            "InputPins": [
-              {
-                "Text": "Cargo_Game.spokeToCaptainOnce == true &&\n(Cargo_Game.spokeToJoeOnce == false ||\nCargo_Game.spokeToJaneOnce == false ||\nCargo_Game.spokeToGeneOnce == false) &&\nCargo_Game.playedCargoGame == false",
-                "Id": "0x100000200001EA6",
-                "Owner": "0x100000200001EA5"
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "",
-                "Id": "0x100000200001EA7",
-                "Owner": "0x100000200001EA5",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x100000200001FE1",
-                    "Target": "0x100000200001FDE"
-                  }
-                ]
-              }
-            ]
-          },
-          "Template": {
-            "Dialogue_Fragment_Default_Button_Text": {
-              "Default_Button_Text": ""
-            }
-          }
-        },
-        {
-          "Type": "Dialogue_Fragment",
-          "Properties": {
-            "TechnicalName": "DFr_0099F76B",
-            "Id": "0x100000200001E99",
-            "Parent": "0x100000200001E74",
+            "TechnicalName": "Captin_Jones_Dialogue_Frag_First_Talk",
+            "Id": "0x100000200001FBE",
+            "Parent": "0x100000200001FA2",
             "MenuText": "First Talk.",
             "StageDirections": "",
-            "Speaker": "0x100000200001957",
+            "Speaker": "0x10000020000177C",
             "Color": {
               "r": 0.08627451,
               "g": 0.2627451,
               "b": 0.654902
             },
-            "Text": "Speak to Captain.",
+            "Text": "Hello, [Player_Character_Entity_Tech_Name.Basic_Character_Attributes.NPC_Feature_Name]!  Welcome aboard.  Before we go further, please speak with the rest of the crew.",
             "ExternalId": "",
             "Position": {
-              "x": 175.0,
-              "y": 425.0
+              "x": 625.60000000000014,
+              "y": 369.0
             },
-            "ZIndex": 1.0,
+            "ZIndex": 11.0,
             "Size": {
               "w": 225.0,
               "h": 200.0
             },
-            "ShortId": 10090347,
+            "ShortId": 1125509814,
             "InputPins": [
               {
                 "Text": "Cargo_Game.spokeToCaptainOnce == false",
-                "Id": "0x100000200001E9A",
-                "Owner": "0x100000200001E99"
+                "Id": "0x100000200001FBF",
+                "Owner": "0x100000200001FBE"
               }
             ],
             "OutputPins": [
               {
-                "Text": "",
-                "Id": "0x100000200001E9B",
-                "Owner": "0x100000200001E99",
+                "Text": "Cargo_Game.spokeToCaptainOnce = true;",
+                "Id": "0x100000200001FC0",
+                "Owner": "0x100000200001FBE",
                 "Connections": [
                   {
                     "Color": {
@@ -4773,9 +4713,69 @@
                       "g": 0.75686276,
                       "b": 0.8
                     },
-                    "Label": "what the fuck is this\r\n",
-                    "TargetPin": "0x100000200001FD8",
-                    "Target": "0x100000200001FD5"
+                    "Label": "",
+                    "TargetPin": "0x100000200001FA6",
+                    "Target": "0x100000200001FA2"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "Dialogue_Fragment_Default_Button_Text": {
+              "Default_Button_Text": ""
+            }
+          }
+        },
+        {
+          "Type": "Dialogue_Fragment",
+          "Properties": {
+            "TechnicalName": "DFr_65352598",
+            "Id": "0x100000200001FC5",
+            "Parent": "0x100000200001FA2",
+            "MenuText": "Haven't finished speaking to crew.",
+            "StageDirections": "",
+            "Speaker": "0x10000020000177C",
+            "Color": {
+              "r": 0.08627451,
+              "g": 0.2627451,
+              "b": 0.654902
+            },
+            "Text": "You haven't finished speaking with the crew yet.",
+            "ExternalId": "",
+            "Position": {
+              "x": 600.60000000000014,
+              "y": 594.0
+            },
+            "ZIndex": 10.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 1697981848,
+            "InputPins": [
+              {
+                "Text": "Cargo_Game.spokeToCaptainOnce == true && \n(Cargo_Game.spokeToGeneOnce == false ||\n Cargo_Game.spokeToJaneOnce == false ||\n Cargo_Game.spokeToJoeOnce == false)",
+                "Id": "0x100000200001FC6",
+                "Owner": "0x100000200001FC5"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000200001FC7",
+                "Owner": "0x100000200001FC5",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000200001FA6",
+                    "Target": "0x100000200001FA2"
                   }
                 ]
               }
@@ -4830,10 +4830,10 @@
         {
           "Type": "Hub",
           "Properties": {
-            "TechnicalName": "Captain_Jones_Start_Hub",
-            "Id": "0x100000200001FAB",
-            "Parent": "0x100000200001FA2",
-            "DisplayName": "Captain Jones Hub",
+            "TechnicalName": "Cargo_Station_Start_Hub",
+            "Id": "0x100000200001EA0",
+            "Parent": "0x100000200001E74",
+            "DisplayName": "Cargo Station Ref",
             "Color": {
               "r": 0.5764706,
               "g": 0.75686276,
@@ -4842,27 +4842,27 @@
             "Text": "",
             "ExternalId": "",
             "Position": {
-              "x": 250.0,
-              "y": 800.0
+              "x": 0.0,
+              "y": 1125.0
             },
             "ZIndex": 0.0,
             "Size": {
               "w": 175.0,
               "h": 50.0
             },
-            "ShortId": 3522748517,
+            "ShortId": 2607497494,
             "InputPins": [
               {
                 "Text": "",
-                "Id": "0x100000200001FAC",
-                "Owner": "0x100000200001FAB"
+                "Id": "0x100000200001EA1",
+                "Owner": "0x100000200001EA0"
               }
             ],
             "OutputPins": [
               {
                 "Text": "",
-                "Id": "0x100000200001FAD",
-                "Owner": "0x100000200001FAB",
+                "Id": "0x100000200001EA2",
+                "Owner": "0x100000200001EA0",
                 "Connections": [
                   {
                     "Color": {
@@ -4872,8 +4872,8 @@
                       "b": 0.8
                     },
                     "Label": "",
-                    "TargetPin": "0x100000200001FB8",
-                    "Target": "0x100000200001FB7"
+                    "TargetPin": "0x100000200001EC9",
+                    "Target": "0x100000200001EC8"
                   },
                   {
                     "Color": {
@@ -4883,8 +4883,8 @@
                       "b": 0.8
                     },
                     "Label": "",
-                    "TargetPin": "0x100000200001FC6",
-                    "Target": "0x100000200001FC5"
+                    "TargetPin": "0x100000200001EC2",
+                    "Target": "0x100000200001EC1"
                   },
                   {
                     "Color": {
@@ -4894,8 +4894,8 @@
                       "b": 0.8
                     },
                     "Label": "",
-                    "TargetPin": "0x100000200001FB1",
-                    "Target": "0x100000200001FB0"
+                    "TargetPin": "0x100000200001E9A",
+                    "Target": "0x100000200001E99"
                   },
                   {
                     "Color": {
@@ -4905,61 +4905,8 @@
                       "b": 0.8
                     },
                     "Label": "",
-                    "TargetPin": "0x100000200001FBF",
-                    "Target": "0x100000200001FBE"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "Type": "Hub",
-          "Properties": {
-            "TechnicalName": "Gene_Start_Hub",
-            "Id": "0x100000200001F6F",
-            "Parent": "0x100000200001F66",
-            "DisplayName": "Gene Hub",
-            "Color": {
-              "r": 0.5764706,
-              "g": 0.75686276,
-              "b": 0.8
-            },
-            "Text": "",
-            "ExternalId": "",
-            "Position": {
-              "x": 275.0,
-              "y": 925.0
-            },
-            "ZIndex": 0.0,
-            "Size": {
-              "w": 175.0,
-              "h": 50.0
-            },
-            "ShortId": 1403806901,
-            "InputPins": [
-              {
-                "Text": "",
-                "Id": "0x100000200001F70",
-                "Owner": "0x100000200001F6F"
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "",
-                "Id": "0x100000200001F71",
-                "Owner": "0x100000200001F6F",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x100000200001F8A",
-                    "Target": "0x100000200001F89"
+                    "TargetPin": "0x100000200001EA6",
+                    "Target": "0x100000200001EA5"
                   },
                   {
                     "Color": {
@@ -4969,138 +4916,8 @@
                       "b": 0.8
                     },
                     "Label": "",
-                    "TargetPin": "0x100000200001F7C",
-                    "Target": "0x100000200001F7B"
-                  },
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x100000200001F91",
-                    "Target": "0x100000200001F90"
-                  },
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x100000200001F83",
-                    "Target": "0x100000200001F82"
-                  },
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x100000200001F75",
-                    "Target": "0x100000200001F74"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "Type": "Hub",
-          "Properties": {
-            "TechnicalName": "Joe_Start_Hub",
-            "Id": "0x100000200001F33",
-            "Parent": "0x100000200001F2A",
-            "DisplayName": "Joe Hub",
-            "Color": {
-              "r": 0.5764706,
-              "g": 0.75686276,
-              "b": 0.8
-            },
-            "Text": "",
-            "ExternalId": "",
-            "Position": {
-              "x": 300.0,
-              "y": 800.0
-            },
-            "ZIndex": 0.0,
-            "Size": {
-              "w": 175.0,
-              "h": 50.0
-            },
-            "ShortId": 3531332113,
-            "InputPins": [
-              {
-                "Text": "",
-                "Id": "0x100000200001F34",
-                "Owner": "0x100000200001F33"
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "",
-                "Id": "0x100000200001F35",
-                "Owner": "0x100000200001F33",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x100000200001F39",
-                    "Target": "0x100000200001F38"
-                  },
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x100000200001F40",
-                    "Target": "0x100000200001F3F"
-                  },
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x100000200001F47",
-                    "Target": "0x100000200001F46"
-                  },
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x100000200001F55",
-                    "Target": "0x100000200001F54"
-                  },
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x100000200001F4E",
-                    "Target": "0x100000200001F4D"
+                    "TargetPin": "0x100000200001EAD",
+                    "Target": "0x100000200001EAC"
                   }
                 ]
               }
@@ -5207,10 +5024,10 @@
         {
           "Type": "Hub",
           "Properties": {
-            "TechnicalName": "Cargo_Station_Start_Hub",
-            "Id": "0x100000200001EA0",
-            "Parent": "0x100000200001E74",
-            "DisplayName": "Cargo Station Ref",
+            "TechnicalName": "Joe_Start_Hub",
+            "Id": "0x100000200001F33",
+            "Parent": "0x100000200001F2A",
+            "DisplayName": "Joe Hub",
             "Color": {
               "r": 0.5764706,
               "g": 0.75686276,
@@ -5219,27 +5036,27 @@
             "Text": "",
             "ExternalId": "",
             "Position": {
-              "x": 0.0,
-              "y": 1125.0
+              "x": 300.0,
+              "y": 800.0
             },
             "ZIndex": 0.0,
             "Size": {
               "w": 175.0,
               "h": 50.0
             },
-            "ShortId": 2607497494,
+            "ShortId": 3531332113,
             "InputPins": [
               {
                 "Text": "",
-                "Id": "0x100000200001EA1",
-                "Owner": "0x100000200001EA0"
+                "Id": "0x100000200001F34",
+                "Owner": "0x100000200001F33"
               }
             ],
             "OutputPins": [
               {
                 "Text": "",
-                "Id": "0x100000200001EA2",
-                "Owner": "0x100000200001EA0",
+                "Id": "0x100000200001F35",
+                "Owner": "0x100000200001F33",
                 "Connections": [
                   {
                     "Color": {
@@ -5249,8 +5066,8 @@
                       "b": 0.8
                     },
                     "Label": "",
-                    "TargetPin": "0x100000200001EC9",
-                    "Target": "0x100000200001EC8"
+                    "TargetPin": "0x100000200001F39",
+                    "Target": "0x100000200001F38"
                   },
                   {
                     "Color": {
@@ -5260,8 +5077,8 @@
                       "b": 0.8
                     },
                     "Label": "",
-                    "TargetPin": "0x100000200001EC2",
-                    "Target": "0x100000200001EC1"
+                    "TargetPin": "0x100000200001F40",
+                    "Target": "0x100000200001F3F"
                   },
                   {
                     "Color": {
@@ -5271,8 +5088,8 @@
                       "b": 0.8
                     },
                     "Label": "",
-                    "TargetPin": "0x100000200001E9A",
-                    "Target": "0x100000200001E99"
+                    "TargetPin": "0x100000200001F47",
+                    "Target": "0x100000200001F46"
                   },
                   {
                     "Color": {
@@ -5282,8 +5099,8 @@
                       "b": 0.8
                     },
                     "Label": "",
-                    "TargetPin": "0x100000200001EA6",
-                    "Target": "0x100000200001EA5"
+                    "TargetPin": "0x100000200001F55",
+                    "Target": "0x100000200001F54"
                   },
                   {
                     "Color": {
@@ -5293,8 +5110,191 @@
                       "b": 0.8
                     },
                     "Label": "",
-                    "TargetPin": "0x100000200001EAD",
-                    "Target": "0x100000200001EAC"
+                    "TargetPin": "0x100000200001F4E",
+                    "Target": "0x100000200001F4D"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Hub",
+          "Properties": {
+            "TechnicalName": "Gene_Start_Hub",
+            "Id": "0x100000200001F6F",
+            "Parent": "0x100000200001F66",
+            "DisplayName": "Gene Hub",
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": 275.0,
+              "y": 925.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 175.0,
+              "h": 50.0
+            },
+            "ShortId": 1403806901,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000200001F70",
+                "Owner": "0x100000200001F6F"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000200001F71",
+                "Owner": "0x100000200001F6F",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000200001F8A",
+                    "Target": "0x100000200001F89"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000200001F75",
+                    "Target": "0x100000200001F74"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000200001F7C",
+                    "Target": "0x100000200001F7B"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000200001F83",
+                    "Target": "0x100000200001F82"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000200001F91",
+                    "Target": "0x100000200001F90"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Hub",
+          "Properties": {
+            "TechnicalName": "Captain_Jones_Start_Hub",
+            "Id": "0x100000200001FAB",
+            "Parent": "0x100000200001FA2",
+            "DisplayName": "Captain Jones Hub",
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": 250.0,
+              "y": 800.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 175.0,
+              "h": 50.0
+            },
+            "ShortId": 3522748517,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000200001FAC",
+                "Owner": "0x100000200001FAB"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000200001FAD",
+                "Owner": "0x100000200001FAB",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000200001FB8",
+                    "Target": "0x100000200001FB7"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000200001FC6",
+                    "Target": "0x100000200001FC5"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000200001FB1",
+                    "Target": "0x100000200001FB0"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000200001FBF",
+                    "Target": "0x100000200001FBE"
                   }
                 ]
               }

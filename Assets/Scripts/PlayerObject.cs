@@ -99,7 +99,8 @@ public class PlayerObject : MonoBehaviour
 
     void DebugStuff()
     {
-        string s = "";
+        DebugText.text = "";
+        /*string s = "";
         s += "agentTypeID: " + NavMeshAgent.agentTypeID + "\n";
         s += "autoBraking: " + NavMeshAgent.autoBraking + "\n";
         s += "autoRepath: " + NavMeshAgent.autoRepath + "\n";
@@ -127,6 +128,6 @@ public class PlayerObject : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.S))
         {
             NavMeshAgent.SetDestination(this.transform.position);
-        }
+        }*/
     }
 }
