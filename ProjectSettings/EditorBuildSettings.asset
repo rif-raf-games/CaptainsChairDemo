@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Intro.unity
     guid: 61e051ecebe094f48927adcd0c3a8770
   - enabled: 1
-    path: Assets/Scenes/Ship.unity
-    guid: 85d0623f9fa984a4da9b56da22c14207
+    path: Assets/Ship Demo Update.unity
+    guid: f55e0596be7e0488d8043b0cad879713
   - enabled: 1
     path: Assets/Mini Games/Cargo/Scenes/CargoGameDebugHub.unity
     guid: f37c8e4d7d05d3a4bb70e0a2af6d8fe0

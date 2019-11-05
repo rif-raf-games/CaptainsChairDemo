@@ -14,7 +14,9 @@ public class PlayerObject : MonoBehaviour
     NavMeshAgent NavMeshAgent;
     CaptainsChairSceneRoot SceneRoot;
     private Vector3 CamOffset;
-    private bool MovementBlocked;
+    private bool MovementBlocked = false;
+    private Flythrough Flythrough;
+    Quaternion CameraDefaultRot;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +25,10 @@ public class PlayerObject : MonoBehaviour
         SceneRoot = GameObject.FindObjectOfType<CaptainsChairSceneRoot>();
 
         CamOffset = Camera.main.transform.position - this.transform.position;
-        MovementBlocked = false;
+        CameraDefaultRot = Camera.main.transform.localRotation;
+        ToggleMovementBlocked(false);
+        Flythrough = Camera.main.GetComponent<Flythrough>();
+       
         /*
         GameObject[] objs = GameObject.FindGameObjectsWithTag("Floor");
         foreach (GameObject o in objs) o.GetComponent<MeshRenderer>().enabled = false;
@@ -32,8 +37,8 @@ public class PlayerObject : MonoBehaviour
     }
 
     public void ToggleMovementBlocked(bool val)
-    {
-        MovementBlocked = val;
+    {        
+        MovementBlocked = val;     
     }
     
     private void OnTriggerEnter(Collider other)
@@ -75,7 +80,24 @@ public class PlayerObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (MovementBlocked == false && Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0))
+        {
+            Vector2 mousePos2D = new Vector2(Input.mousePosition.x, Screen.height - Input.mousePosition.y);
+           // Debug.Log("mousePos2D: " + mousePos2D.ToString("F2"));
+           // Debug.Log("Toggle: " + Flythrough.Toggle.ToString("F2"));
+            if (Flythrough.Toggle.Contains(mousePos2D))
+            {
+               // Debug.Log("contained");
+                return; 
+            }
+            else
+            {
+                //Debug.Log("not contained");
+            }
+
+        }
+        
+        if (MovementBlocked == false && Input.GetMouseButtonDown(0) && Flythrough.FlythroughActive == false)
         {
             //Debug.Log("clicked button");
             LayerMask mask = LayerMask.GetMask("Floor");
@@ -94,12 +116,37 @@ public class PlayerObject : MonoBehaviour
 
     private void LateUpdate()
     {
-        Camera.main.transform.position = this.transform.position + CamOffset;
+        if(Flythrough.FlythroughActive == false)
+        {
+            Camera.main.transform.position = this.transform.position + CamOffset;
+        }
+        
     }
+
+    public void SetCameraSetup( )
+    {
+        if(Flythrough.FlythroughActive == true)
+        {
+            Camera.main.transform.position = new Vector3(-17f, 31.7f, 178f);
+            Camera.main.transform.localRotation = Quaternion.Euler(0f, 180f, 0f);
+        }
+        else
+        {
+            Camera.main.transform.localRotation = CameraDefaultRot;
+        }
+    }
+
+    /*private void OnGUI()
+    {
+        if(GUI.Button(new Rect(0,0,100,100), "rot"))
+        {
+            Camera.main.transform.localRotation = CameraDefaultRot;
+        }
+    }*/
 
     void DebugStuff()
     {
-        DebugText.text = "";
+        DebugText.text = "";        
         /*string s = "";
         s += "agentTypeID: " + NavMeshAgent.agentTypeID + "\n";
         s += "autoBraking: " + NavMeshAgent.autoBraking + "\n";
