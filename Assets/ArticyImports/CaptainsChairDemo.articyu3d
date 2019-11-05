@@ -3211,7 +3211,7 @@
             "TechnicalName": "DFr_6223DFD0",
             "Id": "0x100000200001EBA",
             "Parent": "0x100000200001E74",
-            "MenuText": "Wise ass",
+            "MenuText": "Wise guy",
             "StageDirections": "",
             "Speaker": "0x10000020000186A",
             "Color": {
@@ -3381,7 +3381,7 @@
           },
           "Template": {
             "Dialogue_Fragment_Default_Button_Text": {
-              "Default_Button_Text": "Onto other adventures"
+              "Default_Button_Text": "Thank goodness."
             }
           }
         },
