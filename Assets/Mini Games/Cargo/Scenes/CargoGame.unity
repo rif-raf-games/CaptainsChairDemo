@@ -264,12 +264,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b474483d91b43f6418c45b82cfdd9343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueUI: {fileID: 0}
+  PlayerObject: {fileID: 0}
   SpeakerImage: {fileID: 0}
   SpeakerText: {fileID: 0}
+  DialogueUI: {fileID: 0}
+  DialogueOptions: []
   GameState: 0
   FadeImage: {fileID: 1002715936}
-  PuzzlesToLoad: 0100000002000000
+  PuzzlesToLoad: 01000000
   Puzzles: []
   CurPuzzle: 0
 --- !u!114 &248358490
@@ -526,8 +528,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 40
@@ -605,8 +605,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
