@@ -41,6 +41,6 @@ public class LoadingLogic : MonoBehaviour, IArticyFlowPlayerCallbacks
 
     public void StartButtonClicked()
     {
-        SceneManager.LoadScene("Ship");
+        SceneManager.LoadScene(1);
     }
 }
